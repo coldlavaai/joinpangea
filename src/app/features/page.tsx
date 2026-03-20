@@ -297,9 +297,15 @@ export default function FeaturesPage() {
           <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-white mb-6 max-w-3xl">
             Every tool you need to manage your workforce
           </h1>
-          <p className="text-lg text-white/60 max-w-2xl">
-            Nine integrated modules covering the full worker lifecycle -- from first WhatsApp message to final timesheet.
+          <p className="text-lg text-white/60 max-w-2xl mb-6">
+            Nine integrated modules covering the full worker lifecycle -- from first WhatsApp message to final timesheet. Designed for construction teams who need power without complexity.
           </p>
+          <div className="flex flex-wrap gap-4 text-sm">
+            <span className="bg-forest-800 border border-forest-700/50 rounded-full px-4 py-1.5 text-white/60">No training required</span>
+            <span className="bg-forest-800 border border-forest-700/50 rounded-full px-4 py-1.5 text-white/60">Works on any phone</span>
+            <span className="bg-forest-800 border border-forest-700/50 rounded-full px-4 py-1.5 text-white/60">Live in 2--3 weeks</span>
+            <span className="bg-forest-800 border border-forest-700/50 rounded-full px-4 py-1.5 text-white/60">AI built in, not bolted on</span>
+          </div>
         </div>
       </section>
 

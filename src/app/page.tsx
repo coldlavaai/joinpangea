@@ -20,6 +20,9 @@ import {
   IconPound,
   IconStar,
   IconCamera,
+  IconTarget,
+  IconGlobe,
+  IconLock,
 } from "@/components/icons";
 
 const stats = [
@@ -403,6 +406,78 @@ export default function HomePage() {
               <div className="font-serif text-2xl text-copper-400 mb-2">1 in 3</div>
               <div className="text-sm text-white/60">Workers quit in their first 90 days due to poor onboarding</div>
             </div>
+          </div>
+        </div>
+      </Section>
+
+      {/* Built for today */}
+      <Section dark>
+        <SectionLabel>Built for Today</SectionLabel>
+        <SectionTitle>Your business is growing. Your systems aren&apos;t.</SectionTitle>
+        <SectionDescription>
+          Pangaea isn&apos;t a future bet — it&apos;s a tool for construction companies right now. Whether you&apos;re processing 50 applications a week or managing workers across 10 sites, Pangaea gives you instant visibility, control, and efficiency without the complexity.
+        </SectionDescription>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {[
+            {
+              icon: IconTarget,
+              title: "Handle high volumes",
+              desc: "Processing dozens of applications? Amber qualifies them automatically via WhatsApp. Your team only sees the workers who are actually right for the job.",
+            },
+            {
+              icon: IconGlobe,
+              title: "Total transparency",
+              desc: "Every worker, every cert, every allocation, every message — visible in one dashboard. No more asking around or checking spreadsheets. Everyone sees the same picture.",
+            },
+            {
+              icon: IconZap,
+              title: "Zero learning curve",
+              desc: "Site managers use WhatsApp — the app they already know. Dashboard staff get a clean, intuitive interface. No training manuals, no week-long onboarding courses.",
+            },
+            {
+              icon: IconLock,
+              title: "AI without complexity",
+              desc: "Pangaea uses AI to verify certs, qualify applicants, and manage compliance. But you don&apos;t need to understand AI to use it. It just works — behind the scenes, in plain language.",
+            },
+          ].map((item) => {
+            const Icon = item.icon;
+            return (
+              <div key={item.title} className="bg-forest-900 rounded-xl p-6 border border-forest-700/50">
+                <div className="w-10 h-10 rounded-lg bg-copper-500/10 border border-copper-500/20 flex items-center justify-center mb-4">
+                  <Icon className="w-5 h-5 text-copper-400" />
+                </div>
+                <h3 className="font-serif text-base text-white mb-2">{item.title}</h3>
+                <p className="text-sm text-white/50 leading-relaxed">{item.desc}</p>
+              </div>
+            );
+          })}
+        </div>
+      </Section>
+
+      {/* Who it's for */}
+      <Section>
+        <div className="max-w-4xl mx-auto">
+          <SectionLabel>Who It&apos;s For</SectionLabel>
+          <SectionTitle>If this sounds familiar, Pangaea is for you</SectionTitle>
+          <div className="grid sm:grid-cols-2 gap-6 mt-10">
+            {[
+              "You&apos;re growing and your admin team can&apos;t keep up with onboarding",
+              "You manage workers across multiple sites and lose track of who&apos;s where",
+              "You&apos;ve had a near-miss with compliance — an expired CSCS card, a missed right-to-work check",
+              "Your site managers need information but don&apos;t have access to your systems",
+              "You&apos;re spending hours chasing documents that workers never send back",
+              "You want AI to help, but enterprise software is too expensive and too complicated",
+            ].map((item) => (
+              <div key={item} className="flex items-start gap-3">
+                <IconCheckCircle className="w-5 h-5 text-copper-400 mt-0.5 flex-shrink-0" />
+                <p className="text-white/70 text-sm leading-relaxed" dangerouslySetInnerHTML={{ __html: item }} />
+              </div>
+            ))}
+          </div>
+          <div className="mt-10 bg-forest-800 rounded-xl p-8 border border-copper-500/20">
+            <p className="text-lg text-white/80 leading-relaxed">
+              <span className="text-copper-400 font-semibold">Pangaea fits between</span> the WhatsApp groups and spreadsheets you&apos;ve outgrown, and the enterprise platforms you don&apos;t need. Purpose-built for construction companies with 10–200 workers who want professional-grade workforce management without the overhead.
+            </p>
           </div>
         </div>
       </Section>

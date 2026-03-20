@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Section, SectionLabel, SectionTitle, SectionDescription } from "@/components/section";
-import { IconTrendingUp, IconUsers, IconHardHat, IconBarChart, IconTarget, IconShield, IconZap, IconGlobe, IconCalendar, IconAlertTriangle, IconCheckCircle } from "@/components/icons";
+import { IconTrendingUp, IconUsers, IconHardHat, IconBarChart, IconTarget, IconShield, IconZap, IconGlobe, IconCalendar, IconAlertTriangle, IconCheckCircle, IconClock, IconMessage, IconSearch, IconLock } from "@/components/icons";
 
 export const metadata: Metadata = {
   title: "Why Pangaea",
   description:
-    "Why construction needs Pangaea now: the AI-proof thesis, massive market opportunity, and why no competitor serves the 10–200 worker segment.",
+    "Why construction companies choose Pangaea: handle growing application volumes, give every site manager full visibility, automate compliance, and be ready for the future of construction labour.",
 };
 
 const aiProofStats = [
@@ -51,6 +51,62 @@ const competitors = [
   },
 ];
 
+const todayProblems = [
+  {
+    icon: IconClock,
+    title: "Your admin team is drowning",
+    desc: "15–30 hours a week spent chasing certs, checking right-to-work, and manually onboarding. That&apos;s a full-time salary burned on data entry and phone calls.",
+  },
+  {
+    icon: IconSearch,
+    title: "No visibility across sites",
+    desc: "Site managers can&apos;t see who&apos;s available. Directors can&apos;t see compliance status. Nobody has the full picture without asking three different people.",
+  },
+  {
+    icon: IconMessage,
+    title: "Applications are piling up",
+    desc: "You&apos;re getting 30, 50, 100 applications a week — but your team can only process a handful. Good workers slip through because nobody replied fast enough.",
+  },
+  {
+    icon: IconShield,
+    title: "Compliance is a ticking bomb",
+    desc: "One expired CSCS card costs £875 minimum. One right-to-work failure can mean criminal prosecution. You know the risk — you just can&apos;t track it all manually.",
+  },
+  {
+    icon: IconUsers,
+    title: "Site managers are in the dark",
+    desc: "They need to know who&apos;s coming, who&apos;s compliant, who&apos;s available. But they don&apos;t have login access to any system — they just ring the office.",
+  },
+  {
+    icon: IconLock,
+    title: "Enterprise software isn&apos;t the answer",
+    desc: "You&apos;ve looked at the big platforms. They cost a fortune, take months to set up, and your team needs a week of training just to log a shift. You need something simpler.",
+  },
+];
+
+const pangaeaDifference = [
+  {
+    icon: IconZap,
+    title: "Zero learning curve",
+    desc: "Workers use WhatsApp — the app 2 billion people already know. Site managers use simple Telegram commands. Dashboard staff get a clean interface they can learn in an afternoon. No training courses, no manuals.",
+  },
+  {
+    icon: IconGlobe,
+    title: "Complete transparency",
+    desc: "Every worker, every document, every allocation, every message — in one place. Directors see the big picture. Site managers see their sites. Everyone works from the same data. No more asking around.",
+  },
+  {
+    icon: IconTarget,
+    title: "AI that stays out of your way",
+    desc: "Pangaea uses AI to qualify applicants, verify certs, and chase compliance. But you don&apos;t need to understand AI to use it. There are no algorithms to configure, no models to train. It reads a CSCS card. It asks a worker about their trade. It sends a reminder when a cert expires. Simple.",
+  },
+  {
+    icon: IconBarChart,
+    title: "Built for scale, priced for SMEs",
+    desc: "Whether you&apos;re managing 15 workers or 200, Pangaea handles the volume. Process hundreds of applications automatically. Manage compliance across dozens of sites. All for less than the cost of a single compliance fine.",
+  },
+];
+
 export default function WhyPangaeaPage() {
   return (
     <>
@@ -59,20 +115,60 @@ export default function WhyPangaeaPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionLabel>Why Pangaea</SectionLabel>
           <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-white mb-6 max-w-4xl">
-            Construction is the last industry AI can&apos;t automate
+            You&apos;re growing. Your systems should grow with you.
           </h1>
           <p className="text-lg text-white/60 max-w-2xl">
-            As AI displaces white-collar workers, millions are entering construction. Every career-changer needs verification, induction, and compliance sign-off before stepping on site. That&apos;s where we come in.
+            Pangaea gives construction companies the power of AI-driven workforce management — without the complexity. Whether you&apos;re handling 50 applications a week today or preparing for the wave of new workers entering the trades, Pangaea keeps everything visible, compliant, and under control.
           </p>
         </div>
       </section>
 
-      {/* AI-Proof Thesis */}
+      {/* Today's problems */}
       <Section dark>
-        <SectionLabel>The Opportunity</SectionLabel>
-        <SectionTitle>AI can&apos;t lay bricks</SectionTitle>
+        <SectionLabel>The Problem Today</SectionLabel>
+        <SectionTitle>Sound familiar?</SectionTitle>
         <SectionDescription>
-          While AI transforms white-collar work, construction remains stubbornly human. The physical, unpredictable nature of the work means demand for workers is growing, not shrinking.
+          These are the problems construction companies tell us about every week. If you recognise even two of them, Pangaea will pay for itself.
+        </SectionDescription>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {todayProblems.map((item) => (
+            <div key={item.title} className="bg-forest-900 rounded-xl p-6 border border-forest-700/50">
+              <div className="w-10 h-10 rounded-lg bg-copper-500/10 border border-copper-500/20 flex items-center justify-center mb-4">
+                <item.icon className="w-5 h-5 text-copper-400" />
+              </div>
+              <h3 className="font-serif text-base text-white mb-2" dangerouslySetInnerHTML={{ __html: item.title }} />
+              <p className="text-sm text-white/50 leading-relaxed" dangerouslySetInnerHTML={{ __html: item.desc }} />
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      {/* The Pangaea difference */}
+      <Section>
+        <SectionLabel>The Pangaea Difference</SectionLabel>
+        <SectionTitle>Powerful enough for enterprise. Simple enough for anyone.</SectionTitle>
+        <SectionDescription>
+          Pangaea was designed for site managers who don&apos;t have time to learn new software, and operations teams who need real-time visibility without chasing people for updates.
+        </SectionDescription>
+        <div className="grid sm:grid-cols-2 gap-8">
+          {pangaeaDifference.map((item) => (
+            <div key={item.title} className="bg-forest-800 rounded-xl p-8 border border-forest-700/50">
+              <div className="w-12 h-12 rounded-lg bg-copper-500/10 border border-copper-500/20 flex items-center justify-center mb-5">
+                <item.icon className="w-6 h-6 text-copper-400" />
+              </div>
+              <h3 className="font-serif text-lg text-white mb-3" dangerouslySetInnerHTML={{ __html: item.title }} />
+              <p className="text-sm text-white/60 leading-relaxed" dangerouslySetInnerHTML={{ __html: item.desc }} />
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      {/* Future-proofing */}
+      <Section dark>
+        <SectionLabel>The Bigger Picture</SectionLabel>
+        <SectionTitle>And then there&apos;s what&apos;s coming next</SectionTitle>
+        <SectionDescription>
+          Pangaea solves your problems today. But it also positions you for a structural shift in the construction labour market that&apos;s already underway.
         </SectionDescription>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {aiProofStats.map((s) => (
@@ -95,10 +191,10 @@ export default function WhyPangaeaPage() {
 
       {/* Great Migration */}
       <Section>
-        <SectionLabel>The Great Migration</SectionLabel>
-        <SectionTitle>Millions of workers are switching to trades</SectionTitle>
+        <SectionLabel>The Influx</SectionLabel>
+        <SectionTitle>Millions of new workers are entering the trades</SectionTitle>
         <SectionDescription>
-          White-collar workers displaced by AI are moving into construction. This isn&apos;t a prediction — it&apos;s already happening.
+          White-collar workers displaced by AI are moving into construction. Your applicant pipeline is about to get a lot bigger — and you need the systems to handle it.
         </SectionDescription>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {migrationStats.map((s) => (
@@ -125,8 +221,8 @@ export default function WhyPangaeaPage() {
               <IconTarget className="w-5 h-5 text-copper-400" />
             </div>
             <p className="text-lg text-white/80 leading-relaxed">
-              <span className="text-copper-400 font-semibold">The conclusion:</span>{" "}
-              AI doesn&apos;t threaten construction jobs — it funnels millions of displaced workers toward them. Every career-changer needs verification, induction, and compliance before touching a tool on site. That&apos;s a massive, growing market that no one is serving properly.
+              <span className="text-copper-400 font-semibold">What this means for you:</span>{" "}
+              Your applicant volume is going to increase — significantly. Every new worker still needs a CSCS check, a right-to-work verification, an H&amp;S induction, and a compliance sign-off before they touch a tool on site. The companies with systems to handle that volume will win. The ones still using spreadsheets and WhatsApp groups will drown.
             </p>
           </div>
         </div>
@@ -236,10 +332,10 @@ export default function WhyPangaeaPage() {
       <Section dark>
         <div className="text-center max-w-2xl mx-auto">
           <SectionTitle className="text-center">
-            The market is ready. The product is built.
+            Solve today&apos;s problems. Be ready for tomorrow&apos;s growth.
           </SectionTitle>
           <p className="text-lg text-white/60 mb-8">
-            See why construction companies are switching from spreadsheets and WhatsApp groups to Pangaea.
+            See how Pangaea can make your operations more efficient, give your team full visibility, and handle any volume of workers — now and in the future.
           </p>
           <Link
             href="/demo"
