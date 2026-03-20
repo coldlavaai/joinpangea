@@ -7,6 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages = [
     "",
     "/features",
+    "/platform",
     "/how-it-works",
     "/pricing",
     "/why-pangaea",

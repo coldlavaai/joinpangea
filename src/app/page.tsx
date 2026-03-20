@@ -744,6 +744,79 @@ export default function HomePage() {
         </div>
       </Section>
 
+      {/* Platform screenshots */}
+      <Section>
+        <SectionLabel>The Dashboard</SectionLabel>
+        <SectionTitle>This is what your team sees every day</SectionTitle>
+        <SectionDescription>
+          Real screenshots from the Pangaea platform. No mockups, no renders — this is the actual system your team will use.
+        </SectionDescription>
+
+        {/* Dashboard full-width */}
+        <div className="mb-12">
+          <div className="relative rounded-xl overflow-hidden border border-forest-700/50 shadow-2xl shadow-black/30">
+            <div className="bg-forest-800 px-4 py-2.5 flex items-center gap-2 border-b border-forest-700/50">
+              <div className="flex gap-1.5">
+                <div className="w-2.5 h-2.5 rounded-full bg-white/10" />
+                <div className="w-2.5 h-2.5 rounded-full bg-white/10" />
+                <div className="w-2.5 h-2.5 rounded-full bg-white/10" />
+              </div>
+              <div className="flex-1 ml-3">
+                <div className="bg-forest-900/50 rounded-md px-3 py-1 max-w-xs">
+                  <span className="text-[0.6rem] text-white/30 font-mono">pangaea.app/dashboard</span>
+                </div>
+              </div>
+            </div>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/screenshots/dashboard.png" alt="Pangaea Dashboard" className="w-full h-auto" />
+          </div>
+          <div className="mt-4 max-w-2xl">
+            <h3 className="font-serif text-lg text-white mb-1">Operations Dashboard</h3>
+            <p className="text-sm text-white/50">Compliance alerts, today&apos;s attendance, quick actions, and recent activity — everything your operations team needs at a glance.</p>
+          </div>
+        </div>
+
+        {/* 2x2 grid of key screens */}
+        <div className="grid md:grid-cols-2 gap-8">
+          {[
+            { src: "/screenshots/operatives.png", title: "Workforce Pipeline", desc: "Every worker tracked by status, trade, compliance, and RAP score. Filter, search, and export across your entire pool." },
+            { src: "/screenshots/reports.png", title: "Compliance Reports", desc: "Document expiry timelines, CSCS distribution, right-to-work status, and WTD compliance — all exportable for audits." },
+            { src: "/screenshots/assistant.png", title: "Rex AI Assistant", desc: "Ask Rex anything about your workforce in plain English. Search workers, check compliance, view timesheets — through natural conversation." },
+            { src: "/screenshots/documents.png", title: "Document Verification", desc: "AI-powered cert checking with expiry tracking. Verify or reject with reasons. Auto-block non-compliant workers." },
+          ].map((item) => (
+            <div key={item.title} className="space-y-3">
+              <div className="relative rounded-xl overflow-hidden border border-forest-700/50 shadow-xl shadow-black/20">
+                <div className="bg-forest-800 px-3 py-2 flex items-center gap-2 border-b border-forest-700/50">
+                  <div className="flex gap-1.5">
+                    <div className="w-2 h-2 rounded-full bg-white/10" />
+                    <div className="w-2 h-2 rounded-full bg-white/10" />
+                    <div className="w-2 h-2 rounded-full bg-white/10" />
+                  </div>
+                </div>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={item.src} alt={item.title} className="w-full h-auto" loading="lazy" />
+              </div>
+              <div>
+                <h3 className="font-serif text-base text-white mb-1">{item.title}</h3>
+                <p className="text-xs text-white/50">{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-10 text-center">
+          <Link
+            href="/platform"
+            className="text-copper-400 hover:text-copper-300 font-semibold text-sm transition-colors inline-flex items-center gap-2"
+          >
+            See all 15 platform screens
+            <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </Link>
+        </div>
+      </Section>
+
       {/* Testimonials */}
       <Section>
         <div className="max-w-3xl mx-auto text-center">
