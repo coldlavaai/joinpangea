@@ -1,11 +1,42 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Section, SectionLabel, SectionTitle } from "@/components/section";
+import {
+  IconSend,
+  IconBot,
+  IconCamera,
+  IconUpload,
+  IconHardHat,
+  IconCheckCircle,
+  IconBriefcase,
+  IconMapPin,
+  IconRefresh,
+  IconUsers,
+  IconShield,
+  IconSearch,
+  IconClock,
+  IconBarChart,
+  IconFileCheck,
+  IconPound,
+} from "@/components/icons";
+import { WhatsAppChat } from "@/components/phone-mockup";
 
 export const metadata: Metadata = {
   title: "How It Works",
   description:
     "See how Pangaea onboards construction workers via WhatsApp in 9 simple steps — from first message to site-ready, with AI cert verification and compliance automation.",
+};
+
+const stepIcons: Record<string, React.ReactNode> = {
+  "01": <IconSend className="w-5 h-5 text-copper-400" />,
+  "02": <IconBot className="w-5 h-5 text-copper-400" />,
+  "03": <IconCamera className="w-5 h-5 text-copper-400" />,
+  "04": <IconUpload className="w-5 h-5 text-copper-400" />,
+  "05": <IconHardHat className="w-5 h-5 text-copper-400" />,
+  "06": <IconCheckCircle className="w-5 h-5 text-copper-400" />,
+  "07": <IconBriefcase className="w-5 h-5 text-copper-400" />,
+  "08": <IconMapPin className="w-5 h-5 text-copper-400" />,
+  "09": <IconRefresh className="w-5 h-5 text-copper-400" />,
 };
 
 const workerJourney = [
@@ -21,7 +52,7 @@ const workerJourney = [
     title: "AI qualification",
     description:
       "Amber, our AI onboarding bot, collects essential information: name, trade, experience, location, availability, and right-to-work status.",
-    detail: "7-step conversational flow. Supports English, Polish, and Romanian. Takes 3–5 minutes.",
+    detail: "7-step conversational flow. Supports English, Polish, and Romanian. Takes 3-5 minutes.",
   },
   {
     step: "03",
@@ -74,30 +105,102 @@ const workerJourney = [
   },
 ];
 
+const certPhotoMessages = [
+  {
+    type: "incoming" as const,
+    text: "Nice one, that's your details all saved. Now I need to verify your CSCS card. Can you send me a photo of the front of the card?",
+    time: "14:32",
+  },
+  {
+    type: "outgoing" as const,
+    text: "[Photo: CSCS Green Labourer card]",
+    time: "14:33",
+  },
+  {
+    type: "outgoing" as const,
+    text: "there you go mate, took it just now",
+    time: "14:33",
+  },
+  {
+    type: "incoming" as const,
+    text: "Got it, thanks. I can see that's a Green CSCS Labourer card for Darren Mitchell, expiry 04/2028. Everything checks out — card is valid and in date.",
+    time: "14:33",
+  },
+  {
+    type: "incoming" as const,
+    text: "Next up I need your right-to-work document. Can you send a photo of your passport or share your Home Office share code?",
+    time: "14:34",
+  },
+];
+
+const inductionMessages = [
+  {
+    type: "incoming" as const,
+    text: "Right, last step — quick H&S induction for the Meridian Tower project. 5 questions, takes about 2 minutes. Ready?",
+    time: "15:01",
+  },
+  {
+    type: "outgoing" as const,
+    text: "yeah go on",
+    time: "15:01",
+  },
+  {
+    type: "incoming" as const,
+    text: "Question 1: You notice a colleague working at height without clipping on their harness lanyard. What do you do?\n\nA) Carry on, it's not your problem\nB) Stop them and remind them to clip on\nC) Report it at the end of the shift\nD) Shout up to warn them",
+    time: "15:02",
+  },
+  {
+    type: "outgoing" as const,
+    text: "B",
+    time: "15:02",
+  },
+  {
+    type: "incoming" as const,
+    text: "Correct. You should always intervene immediately if someone is at risk. Never leave it until later — a fall from height can be fatal in seconds. Moving on to question 2...",
+    time: "15:02",
+  },
+];
+
 const employerFeatures = [
   {
+    icon: <IconUsers className="w-6 h-6 text-copper-400" />,
     title: "Worker Pipeline",
-    description: "See every worker's status at a glance: Applied → Verifying → Inducted → Available → Working.",
+    description: "See every worker's status at a glance: Applied, Verifying, Inducted, Available, Working. Filter by trade, location, or compliance score. Bulk actions for managing large pools.",
   },
   {
+    icon: <IconShield className="w-6 h-6 text-copper-400" />,
     title: "Compliance Overview",
-    description: "Real-time dashboard showing expiring certs, non-compliant workers, and audit risk across all sites.",
+    description: "Real-time dashboard showing expiring certs, non-compliant workers, and audit risk across all sites. Automatic alerts at 90, 30, and 7 days before expiry.",
   },
   {
+    icon: <IconSearch className="w-6 h-6 text-copper-400" />,
     title: "Labour Requests",
-    description: "Create requests by trade, site, and duration. Search your pool, broadcast offers, and fill positions fast.",
+    description: "Create requests by trade, site, and duration. Search your pool, broadcast offers via WhatsApp, and fill positions fast. First-to-accept allocation system.",
   },
   {
+    icon: <IconClock className="w-6 h-6 text-copper-400" />,
     title: "Shift Tracking",
-    description: "Log arrivals, breaks, and departures. Working Time Directive compliance checks built in.",
+    description: "Log arrivals, breaks, and departures. Working Time Directive compliance checks built in. Automatic overtime calculation and break enforcement alerts.",
   },
   {
+    icon: <IconPound className="w-6 h-6 text-copper-400" />,
     title: "Weekly Timesheets",
-    description: "Auto-generated timesheets with gross pay calculation and professional PDF export for payroll.",
+    description: "Auto-generated timesheets with gross pay calculation and professional PDF export for payroll. CIS deduction support for subcontractors.",
   },
   {
+    icon: <IconBarChart className="w-6 h-6 text-copper-400" />,
     title: "Reports & Export",
-    description: "Compliance reports, CSCS distribution, and performance metrics. One-click CSV export for audits.",
+    description: "Compliance reports, CSCS distribution, and performance metrics. One-click CSV export for audits. Site-level and organisation-level views.",
+  },
+  {
+    icon: <IconFileCheck className="w-6 h-6 text-copper-400" />,
+    title: "Document Vault",
+    description: "Centralised storage for all worker documents — CSCS cards, passports, right-to-work evidence. Version history and expiry tracking on every file.",
+  },
+  {
+    icon: <IconMapPin className="w-6 h-6 text-copper-400" />,
+    title: "Multi-site Management",
+    description: "Manage workers across multiple sites from a single dashboard. Site-specific inductions, rosters, and compliance requirements.",
   },
 ];
 
@@ -122,25 +225,57 @@ export default function HowItWorksPage() {
         <SectionLabel>The Worker Journey</SectionLabel>
         <SectionTitle>WhatsApp does the heavy lifting</SectionTitle>
         <div className="mt-12 space-y-6">
-          {workerJourney.map((step) => (
-            <div
-              key={step.step}
-              className="bg-forest-900 rounded-xl p-6 sm:p-8 border border-forest-700/50 flex flex-col sm:flex-row gap-6"
-            >
-              <div className="flex-shrink-0 w-12 h-12 rounded-full bg-copper-500/10 border border-copper-500/30 flex items-center justify-center">
-                <span className="font-mono text-sm font-semibold text-copper-400">
-                  {step.step}
-                </span>
+          {workerJourney.map((step, index) => (
+            <div key={step.step}>
+              <div className="bg-forest-900 rounded-xl p-6 sm:p-8 border border-forest-700/50 flex flex-col sm:flex-row gap-6">
+                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-copper-500/10 border border-copper-500/30 flex items-center justify-center">
+                  {stepIcons[step.step]}
+                </div>
+                <div className="flex-grow">
+                  <div className="flex items-center gap-3 mb-2">
+                    <span className="font-mono text-xs text-copper-400/60">
+                      Step {step.step}
+                    </span>
+                    <h3 className="font-serif text-xl text-white">
+                      {step.title}
+                    </h3>
+                  </div>
+                  <p className="text-white/60 leading-relaxed mb-3">
+                    {step.description}
+                  </p>
+                  <p className="text-sm text-white/40 italic">{step.detail}</p>
+                </div>
               </div>
-              <div className="flex-grow">
-                <h3 className="font-serif text-xl text-white mb-2">
-                  {step.title}
-                </h3>
-                <p className="text-white/60 leading-relaxed mb-3">
-                  {step.description}
-                </p>
-                <p className="text-sm text-white/40 italic">{step.detail}</p>
-              </div>
+
+              {/* WhatsApp mockup after step 3 (cert photo) */}
+              {step.step === "03" && (
+                <div className="mt-8 mb-4 flex flex-col items-center">
+                  <p className="text-sm text-white/40 mb-6 text-center max-w-md">
+                    Workers snap and send their cert photo directly in WhatsApp. AI verifies it in seconds.
+                  </p>
+                  <WhatsAppChat
+                    contactName="Amber - Pangaea"
+                    contactStatus="online"
+                    messages={certPhotoMessages}
+                    variant="iphone"
+                  />
+                </div>
+              )}
+
+              {/* WhatsApp mockup after step 5 (H&S induction) */}
+              {step.step === "05" && (
+                <div className="mt-8 mb-4 flex flex-col items-center">
+                  <p className="text-sm text-white/40 mb-6 text-center max-w-md">
+                    The induction quiz runs entirely inside WhatsApp. No links, no apps, no login screens.
+                  </p>
+                  <WhatsAppChat
+                    contactName="Amber - Pangaea"
+                    contactStatus="online"
+                    messages={inductionMessages}
+                    variant="galaxy"
+                  />
+                </div>
+              )}
             </div>
           ))}
         </div>
@@ -153,12 +288,15 @@ export default function HowItWorksPage() {
         <p className="text-lg text-white/60 max-w-2xl mb-12">
           While workers onboard via WhatsApp, employers manage everything from a clean, purpose-built web dashboard.
         </p>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {employerFeatures.map((f) => (
             <div
               key={f.title}
               className="bg-forest-800 rounded-xl p-6 border border-forest-700/50"
             >
+              <div className="w-10 h-10 rounded-lg bg-copper-500/10 border border-copper-500/20 flex items-center justify-center mb-4">
+                {f.icon}
+              </div>
               <h3 className="font-serif text-lg text-white mb-2">{f.title}</h3>
               <p className="text-sm text-white/60 leading-relaxed">
                 {f.description}

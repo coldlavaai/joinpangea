@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Section, SectionLabel, SectionTitle } from "@/components/section";
+import { IconCheckCircle, IconUsers, IconZap, IconStar, IconGlobe, IconPound, IconShield, IconMessage, IconBarChart, IconBriefcase, IconClock, IconCalendar } from "@/components/icons";
 
 export const metadata: Metadata = {
   title: "Pricing",
@@ -104,6 +105,39 @@ const usPlans = [
   },
 ];
 
+const faqs = [
+  {
+    q: "What's included in the setup fee?",
+    a: "Full system configuration, WhatsApp/SMS channel setup, custom branding, H&S induction content creation, staff training, and data migration from existing spreadsheets if needed.",
+    icon: IconBriefcase,
+  },
+  {
+    q: "Are there any per-worker charges?",
+    a: "No. Your monthly fee covers your entire workforce up to the plan limit. WhatsApp/SMS messaging costs are included.",
+    icon: IconUsers,
+  },
+  {
+    q: "Can I change plans later?",
+    a: "Yes. Upgrade or downgrade at any time. If your workforce grows beyond your plan limit, we'll move you to the next tier automatically.",
+    icon: IconZap,
+  },
+  {
+    q: "What if I have more than 200 workers?",
+    a: "Contact us for custom enterprise pricing. We'll build a plan around your specific needs.",
+    icon: IconBarChart,
+  },
+  {
+    q: "Is there a contract?",
+    a: "Annual contracts with a discount, or month-to-month. Either way, you can cancel at any time with 30 days notice.",
+    icon: IconShield,
+  },
+  {
+    q: "How long does setup take?",
+    a: "Most customers are live within 2–3 weeks. That includes configuration, training, and importing your existing workforce data.",
+    icon: IconClock,
+  },
+];
+
 function PricingCard({
   plan,
   period,
@@ -120,7 +154,8 @@ function PricingCard({
       }`}
     >
       {plan.featured && (
-        <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-copper-500 text-white text-xs font-mono uppercase tracking-wider px-4 py-1 rounded-full">
+        <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-copper-500 text-white text-xs font-mono uppercase tracking-wider px-4 py-1 rounded-full flex items-center gap-1.5">
+          <IconStar className="w-3 h-3" />
           Most Popular
         </div>
       )}
@@ -136,19 +171,7 @@ function PricingCard({
       <ul className="space-y-3 mb-8">
         {plan.features.map((f) => (
           <li key={f} className="flex items-start gap-3 text-sm">
-            <svg
-              className="w-4 h-4 text-copper-400 mt-0.5 flex-shrink-0"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth="2"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M5 13l4 4L19 7"
-              />
-            </svg>
+            <IconCheckCircle className="w-4 h-4 text-copper-400 mt-0.5 flex-shrink-0" />
             <span className="text-white/70">{f}</span>
           </li>
         ))}
@@ -188,7 +211,8 @@ export default function PricingPage() {
         <div className="text-center mb-12">
           <SectionLabel>United Kingdom</SectionLabel>
           <SectionTitle className="text-center">UK Plans</SectionTitle>
-          <p className="text-sm text-white/50">
+          <p className="text-sm text-white/50 flex items-center justify-center gap-2">
+            <IconGlobe className="w-4 h-4 text-copper-400" />
             All prices in GBP. WhatsApp-based onboarding. CSCS and right-to-work verification.
           </p>
         </div>
@@ -204,7 +228,8 @@ export default function PricingPage() {
         <div className="text-center mb-12">
           <SectionLabel>United States</SectionLabel>
           <SectionTitle className="text-center">US Plans</SectionTitle>
-          <p className="text-sm text-white/50">
+          <p className="text-sm text-white/50 flex items-center justify-center gap-2">
+            <IconGlobe className="w-4 h-4 text-copper-400" />
             All prices in USD. SMS-based onboarding. OSHA and I-9/E-Verify support.
           </p>
         </div>
@@ -222,42 +247,22 @@ export default function PricingPage() {
             Frequently asked questions
           </SectionTitle>
           <div className="mt-12 space-y-8">
-            {[
-              {
-                q: "What's included in the setup fee?",
-                a: "Full system configuration, WhatsApp/SMS channel setup, custom branding, H&S induction content creation, staff training, and data migration from existing spreadsheets if needed.",
-              },
-              {
-                q: "Are there any per-worker charges?",
-                a: "No. Your monthly fee covers your entire workforce up to the plan limit. WhatsApp/SMS messaging costs are included.",
-              },
-              {
-                q: "Can I change plans later?",
-                a: "Yes. Upgrade or downgrade at any time. If your workforce grows beyond your plan limit, we'll move you to the next tier automatically.",
-              },
-              {
-                q: "What if I have more than 200 workers?",
-                a: "Contact us for custom enterprise pricing. We'll build a plan around your specific needs.",
-              },
-              {
-                q: "Is there a contract?",
-                a: "Annual contracts with a discount, or month-to-month. Either way, you can cancel at any time with 30 days notice.",
-              },
-              {
-                q: "How long does setup take?",
-                a: "Most customers are live within 2–3 weeks. That includes configuration, training, and importing your existing workforce data.",
-              },
-            ].map((faq) => (
+            {faqs.map((faq) => (
               <div
                 key={faq.q}
-                className="border-b border-forest-700/50 pb-6"
+                className="border-b border-forest-700/50 pb-6 flex items-start gap-4"
               >
-                <h3 className="font-serif text-lg text-white mb-2">
-                  {faq.q}
-                </h3>
-                <p className="text-sm text-white/60 leading-relaxed">
-                  {faq.a}
-                </p>
+                <div className="w-10 h-10 rounded-lg bg-copper-500/10 border border-copper-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <faq.icon className="w-5 h-5 text-copper-400" />
+                </div>
+                <div>
+                  <h3 className="font-serif text-lg text-white mb-2">
+                    {faq.q}
+                  </h3>
+                  <p className="text-sm text-white/60 leading-relaxed">
+                    {faq.a}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
@@ -275,8 +280,9 @@ export default function PricingPage() {
           </p>
           <Link
             href="/demo"
-            className="inline-block bg-copper-500 hover:bg-copper-600 text-white font-semibold px-8 py-4 rounded-lg transition-colors text-lg"
+            className="inline-flex items-center gap-2 bg-copper-500 hover:bg-copper-600 text-white font-semibold px-8 py-4 rounded-lg transition-colors text-lg"
           >
+            <IconCalendar className="w-5 h-5" />
             Book a Demo
           </Link>
         </div>

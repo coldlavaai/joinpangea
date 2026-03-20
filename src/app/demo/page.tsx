@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Section, SectionLabel, SectionTitle } from "@/components/section";
+import { IconCheckCircle, IconCalendar, IconMail, IconClock, IconZap, IconStar } from "@/components/icons";
 
 export const metadata: Metadata = {
   title: "Book a Demo",
@@ -36,28 +37,21 @@ export default function DemoPage() {
                   "ROI calculation for your specific business",
                 ].map((item) => (
                   <div key={item} className="flex items-start gap-3">
-                    <svg
-                      className="w-5 h-5 text-copper-400 mt-0.5 flex-shrink-0"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
+                    <IconCheckCircle className="w-5 h-5 text-copper-400 mt-0.5 flex-shrink-0" />
                     <span className="text-white/70">{item}</span>
                   </div>
                 ))}
               </div>
 
               <div className="bg-forest-800 rounded-xl p-6 border border-forest-700/50">
-                <h3 className="font-mono text-xs uppercase tracking-wider text-copper-400 mb-3">
-                  Prefer email?
-                </h3>
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-10 h-10 rounded-lg bg-copper-500/10 border border-copper-500/20 flex items-center justify-center">
+                    <IconMail className="w-5 h-5 text-copper-400" />
+                  </div>
+                  <h3 className="font-mono text-xs uppercase tracking-wider text-copper-400">
+                    Prefer email?
+                  </h3>
+                </div>
                 <p className="text-sm text-white/60 mb-3">
                   Drop us a line and we&apos;ll get back to you within 24 hours.
                 </p>
@@ -74,19 +68,7 @@ export default function DemoPage() {
             <div className="bg-forest-800 rounded-xl border border-forest-700/50 p-8 lg:p-12 min-h-[500px] flex items-center justify-center">
               <div className="text-center">
                 <div className="w-16 h-16 rounded-full bg-copper-500/10 border border-copper-500/30 flex items-center justify-center mx-auto mb-6">
-                  <svg
-                    className="w-8 h-8 text-copper-400"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"
-                    />
-                  </svg>
+                  <IconCalendar className="w-8 h-8 text-copper-400" />
                 </div>
                 <h3 className="font-serif text-xl text-white mb-3">
                   Calendar booking coming soon
@@ -96,8 +78,9 @@ export default function DemoPage() {
                 </p>
                 <Link
                   href="mailto:hello@coldlava.ai?subject=Pangaea%20Demo%20Request"
-                  className="inline-block bg-copper-500 hover:bg-copper-600 text-white font-semibold px-6 py-3 rounded-lg transition-colors"
+                  className="inline-flex items-center gap-2 bg-copper-500 hover:bg-copper-600 text-white font-semibold px-6 py-3 rounded-lg transition-colors"
                 >
+                  <IconMail className="w-4 h-4" />
                   Email to Book
                 </Link>
               </div>
@@ -117,14 +100,23 @@ export default function DemoPage() {
           </p>
           <div className="grid sm:grid-cols-3 gap-8">
             <div>
+              <div className="w-10 h-10 rounded-lg bg-copper-500/10 border border-copper-500/20 flex items-center justify-center mx-auto mb-3">
+                <IconClock className="w-5 h-5 text-copper-400" />
+              </div>
               <div className="font-serif text-3xl text-copper-400 mb-1">20 min</div>
               <div className="text-sm text-white/50">Demo call length</div>
             </div>
             <div>
+              <div className="w-10 h-10 rounded-lg bg-copper-500/10 border border-copper-500/20 flex items-center justify-center mx-auto mb-3">
+                <IconZap className="w-5 h-5 text-copper-400" />
+              </div>
               <div className="font-serif text-3xl text-copper-400 mb-1">2–3 weeks</div>
               <div className="text-sm text-white/50">From demo to live</div>
             </div>
             <div>
+              <div className="w-10 h-10 rounded-lg bg-copper-500/10 border border-copper-500/20 flex items-center justify-center mx-auto mb-3">
+                <IconStar className="w-5 h-5 text-copper-400" />
+              </div>
               <div className="font-serif text-3xl text-copper-400 mb-1">Month 1</div>
               <div className="text-sm text-white/50">ROI breakeven</div>
             </div>

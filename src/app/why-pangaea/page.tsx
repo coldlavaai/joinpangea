@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Section, SectionLabel, SectionTitle, SectionDescription } from "@/components/section";
+import { IconTrendingUp, IconUsers, IconHardHat, IconBarChart, IconTarget, IconShield, IconZap, IconGlobe, IconCalendar, IconAlertTriangle, IconCheckCircle } from "@/components/icons";
 
 export const metadata: Metadata = {
   title: "Why Pangaea",
@@ -9,17 +10,17 @@ export const metadata: Metadata = {
 };
 
 const aiProofStats = [
-  { value: "25%", label: "AI handles only 25% of unpredictable physical work", source: "Goldman Sachs" },
-  { value: "52%", label: "View trade work as less vulnerable than white-collar roles", source: "Industry Survey" },
-  { value: "5.3%", label: "Skilled trades growth rate 2024–2034", source: "BlackRock" },
-  { value: "663K+", label: "US construction job openings yearly through 2033", source: "BLS" },
+  { value: "25%", label: "AI handles only 25% of unpredictable physical work", source: "Goldman Sachs", icon: IconHardHat },
+  { value: "52%", label: "View trade work as less vulnerable than white-collar roles", source: "Industry Survey", icon: IconShield },
+  { value: "5.3%", label: "Skilled trades growth rate 2024–2034", source: "BlackRock", icon: IconTrendingUp },
+  { value: "663K+", label: "US construction job openings yearly through 2033", source: "BLS", icon: IconUsers },
 ];
 
 const migrationStats = [
-  { value: "42%", label: "of Gen Z planning blue-collar careers", sub: "37% have bachelor's degrees" },
-  { value: "40%", label: "of 2025 graduates chose trades over traditional careers", sub: "" },
-  { value: "55K", label: "US tech job cuts in 2025 attributed to AI", sub: "Workers flowing into trades" },
-  { value: "47%", label: "of skilled trades workers out-earn median college grad", sub: "" },
+  { value: "42%", label: "of Gen Z planning blue-collar careers", sub: "37% have bachelor's degrees", icon: IconUsers },
+  { value: "40%", label: "of 2025 graduates chose trades over traditional careers", sub: "", icon: IconTrendingUp },
+  { value: "55K", label: "US tech job cuts in 2025 attributed to AI", sub: "Workers flowing into trades", icon: IconZap },
+  { value: "47%", label: "of skilled trades workers out-earn median college grad", sub: "", icon: IconBarChart },
 ];
 
 const competitors = [
@@ -79,6 +80,9 @@ export default function WhyPangaeaPage() {
               key={s.label}
               className="bg-forest-900 rounded-xl p-6 border border-forest-700/50"
             >
+              <div className="w-10 h-10 rounded-lg bg-copper-500/10 border border-copper-500/20 flex items-center justify-center mb-4">
+                <s.icon className="w-5 h-5 text-copper-400" />
+              </div>
               <div className="font-serif text-3xl text-copper-400 mb-2">
                 {s.value}
               </div>
@@ -102,6 +106,9 @@ export default function WhyPangaeaPage() {
               key={s.label}
               className="bg-forest-800 rounded-xl p-6 border border-forest-700/50 text-center"
             >
+              <div className="w-10 h-10 rounded-lg bg-copper-500/10 border border-copper-500/20 flex items-center justify-center mx-auto mb-4">
+                <s.icon className="w-5 h-5 text-copper-400" />
+              </div>
               <div className="font-serif text-3xl text-copper-400 mb-2">
                 {s.value}
               </div>
@@ -113,10 +120,15 @@ export default function WhyPangaeaPage() {
           ))}
         </div>
         <div className="mt-12 bg-forest-800 rounded-xl p-8 border border-copper-500/20">
-          <p className="text-lg text-white/80 leading-relaxed">
-            <span className="text-copper-400 font-semibold">The conclusion:</span>{" "}
-            AI doesn&apos;t threaten construction jobs — it funnels millions of displaced workers toward them. Every career-changer needs verification, induction, and compliance before touching a tool on site. That&apos;s a massive, growing market that no one is serving properly.
-          </p>
+          <div className="flex items-start gap-4">
+            <div className="w-10 h-10 rounded-lg bg-copper-500/10 border border-copper-500/20 flex items-center justify-center flex-shrink-0 mt-1">
+              <IconTarget className="w-5 h-5 text-copper-400" />
+            </div>
+            <p className="text-lg text-white/80 leading-relaxed">
+              <span className="text-copper-400 font-semibold">The conclusion:</span>{" "}
+              AI doesn&apos;t threaten construction jobs — it funnels millions of displaced workers toward them. Every career-changer needs verification, induction, and compliance before touching a tool on site. That&apos;s a massive, growing market that no one is serving properly.
+            </p>
+          </div>
         </div>
       </Section>
 
@@ -126,8 +138,13 @@ export default function WhyPangaeaPage() {
         <SectionTitle>Massive market. Zero solutions.</SectionTitle>
         <div className="grid md:grid-cols-2 gap-8">
           <div className="bg-forest-900 rounded-xl p-8 border border-forest-700/50">
-            <div className="font-mono text-xs uppercase tracking-wider text-copper-400 mb-6">
-              United Kingdom
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-10 h-10 rounded-lg bg-copper-500/10 border border-copper-500/20 flex items-center justify-center">
+                <IconGlobe className="w-5 h-5 text-copper-400" />
+              </div>
+              <div className="font-mono text-xs uppercase tracking-wider text-copper-400">
+                United Kingdom
+              </div>
             </div>
             <div className="space-y-4">
               <div>
@@ -145,8 +162,13 @@ export default function WhyPangaeaPage() {
             </div>
           </div>
           <div className="bg-forest-900 rounded-xl p-8 border border-forest-700/50">
-            <div className="font-mono text-xs uppercase tracking-wider text-copper-400 mb-6">
-              United States
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-10 h-10 rounded-lg bg-copper-500/10 border border-copper-500/20 flex items-center justify-center">
+                <IconGlobe className="w-5 h-5 text-copper-400" />
+              </div>
+              <div className="font-mono text-xs uppercase tracking-wider text-copper-400">
+                United States
+              </div>
             </div>
             <div className="space-y-4">
               <div>
@@ -179,20 +201,29 @@ export default function WhyPangaeaPage() {
               key={c.name}
               className="bg-forest-800 rounded-xl p-6 border border-forest-700/50 grid md:grid-cols-3 gap-6"
             >
-              <div>
-                <div className="font-mono text-sm font-semibold text-white/80 mb-1">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-lg bg-forest-700/50 border border-forest-600/30 flex items-center justify-center flex-shrink-0">
+                  <IconTarget className="w-5 h-5 text-white/40" />
+                </div>
+                <div className="font-mono text-sm font-semibold text-white/80">
                   {c.name}
                 </div>
               </div>
               <div>
-                <div className="font-mono text-xs uppercase tracking-wider text-white/40 mb-2">
-                  Their limitation
+                <div className="flex items-center gap-2 mb-2">
+                  <IconAlertTriangle className="w-3.5 h-3.5 text-white/40" />
+                  <div className="font-mono text-xs uppercase tracking-wider text-white/40">
+                    Their limitation
+                  </div>
                 </div>
                 <p className="text-sm text-white/60">{c.weakness}</p>
               </div>
               <div>
-                <div className="font-mono text-xs uppercase tracking-wider text-copper-400 mb-2">
-                  Pangaea advantage
+                <div className="flex items-center gap-2 mb-2">
+                  <IconCheckCircle className="w-3.5 h-3.5 text-copper-400" />
+                  <div className="font-mono text-xs uppercase tracking-wider text-copper-400">
+                    Pangaea advantage
+                  </div>
                 </div>
                 <p className="text-sm text-white/70">{c.pangaea}</p>
               </div>
@@ -212,8 +243,9 @@ export default function WhyPangaeaPage() {
           </p>
           <Link
             href="/demo"
-            className="inline-block bg-copper-500 hover:bg-copper-600 text-white font-semibold px-8 py-4 rounded-lg transition-colors text-lg"
+            className="inline-flex items-center gap-2 bg-copper-500 hover:bg-copper-600 text-white font-semibold px-8 py-4 rounded-lg transition-colors text-lg"
           >
+            <IconCalendar className="w-5 h-5" />
             Book a Demo
           </Link>
         </div>
