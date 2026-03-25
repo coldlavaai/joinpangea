@@ -863,7 +863,7 @@ export default function HomePage() {
                 <IconPound className="w-5 h-5 text-copper-400" />
               </div>
               <div className="font-serif text-2xl text-copper-400 mb-2">Agency markup</div>
-              <div className="font-serif text-4xl sm:text-5xl text-white mb-3"><span className="animate-pulse-glow inline-block text-amber-400/90">30&ndash;40%</span></div>
+              <div className="font-serif text-4xl sm:text-5xl text-white mb-3"><span className="animate-pulse-glow inline-block text-amber-400/90">15&ndash;20%</span></div>
               <p className="text-sm text-white/50 leading-relaxed">
                 Per worker, per hour, ongoing. Build your own compliant labour pool and reduce your dependency on agencies. The savings compound every single week.
               </p>
@@ -872,10 +872,10 @@ export default function HomePage() {
               <div className="w-10 h-10 rounded-lg bg-copper-500/10 border border-copper-500/20 flex items-center justify-center mb-4">
                 <IconClock className="w-5 h-5 text-copper-400" />
               </div>
-              <div className="font-serif text-2xl text-copper-400 mb-2">Admin hours</div>
-              <div className="font-serif text-4xl sm:text-5xl text-white mb-3"><span className="animate-pulse-glow inline-block text-amber-400/90">15&ndash;30 hrs/wk</span></div>
+              <div className="font-serif text-2xl text-copper-400 mb-2">Paperwork cost</div>
+              <div className="font-serif text-4xl sm:text-5xl text-white mb-3"><span className="animate-pulse-glow inline-block text-amber-400/90">£1,500/yr</span></div>
               <p className="text-sm text-white/50 leading-relaxed">
-                Chasing paperwork, checking certs, coordinating by WhatsApp group. In recruitment, Pangea replaces the work of your entire resourcer and admin team.
+                Per employee, per year — lost to reading, filling, and chasing mislaid documents (Re-flow/YouGov, 2019). Pangea replaces the paperwork with structured, automated processes.
               </p>
             </div>
           </div>
@@ -900,7 +900,7 @@ export default function HomePage() {
         </SectionDescription>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {[
-            { icon: IconMessage, title: "WhatsApp & SMS", desc: "Two-way messaging with workers. Template-based compliance messages. Full audit trail." },
+            { icon: IconMessage, title: "Integrated Messaging", desc: "Two-way communication with workers. Template-based compliance messages. Full audit trail." },
             { icon: IconFileCheck, title: "Document Management", desc: "Upload, verify, and track every cert, ID, and right-to-work document. Vision AI validation." },
             { icon: IconUsers, title: "Workforce Pipeline", desc: "Track every worker from application to site-ready. 8-stage status progression with compliance gates." },
             { icon: IconClipboard, title: "Labour Requests", desc: "Create requests by trade, site, and duration. Smart pool search and broadcast offers." },
@@ -923,114 +923,19 @@ export default function HomePage() {
         </div>
       </Section>
 
-      {/* Platform screenshots */}
+      {/* Platform — Book a Demo CTA (screenshots removed per Donna's feedback) */}
       <Section>
-        <SectionLabel>The Dashboard</SectionLabel>
-        <SectionTitle>This is what your team sees every day</SectionTitle>
-        <SectionDescription>
-          Real screenshots from the Pangea platform. No mockups, no renders — this is the actual system your team will use.
-        </SectionDescription>
-
-        {/* Dashboard full-width */}
-        <div className="mb-12">
-          <div className="relative rounded-xl overflow-hidden border border-forest-700/20 shadow-2xl shadow-black/40 hover:shadow-[0_0_60px_-10px_rgba(193,127,89,0.1)] transition-all duration-500">
-            <div className="bg-forest-800/80 backdrop-blur-sm px-4 py-2.5 flex items-center gap-2 border-b border-forest-700/20">
-              <div className="flex gap-1.5">
-                <div className="w-2.5 h-2.5 rounded-full bg-white/10" />
-                <div className="w-2.5 h-2.5 rounded-full bg-white/10" />
-                <div className="w-2.5 h-2.5 rounded-full bg-white/10" />
-              </div>
-              <div className="flex-1 ml-3">
-                <div className="bg-forest-900/50 rounded-md px-3 py-1 max-w-xs">
-                  <span className="text-[0.6rem] text-white/30 font-mono">app.joinpangea.ai/dashboard</span>
-                </div>
-              </div>
-            </div>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/screenshots/dashboard.png" alt="Pangea Dashboard" className="w-full h-auto" />
-          </div>
-          <div className="mt-4 max-w-2xl">
-            <h3 className="font-serif text-lg text-white mb-1">Operations Dashboard</h3>
-            <p className="text-sm text-white/50">Compliance alerts, today&apos;s attendance, quick actions, and recent activity — everything your operations team needs at a glance.</p>
-          </div>
-        </div>
-
-        {/* Feature screens grid — row 1 */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {[
-            { src: "/screenshots/operatives.png", title: "Workforce Pipeline", desc: "Every worker tracked by status, trade, compliance, and RAP score. Filter, search, and export across your entire pool." },
-            { src: "/screenshots/feature-operative-profile.png", title: "Operative Profile", desc: "Full worker profile with pay rate, trade, contact details, documents, allocations, and compliance status in one view." },
-            { src: "/screenshots/feature-ncr-detail.png", title: "Incident Management", desc: "Log safety breaches, no-shows, and conduct issues. Auto-block non-compliant workers. Track resolution with full audit trail." },
-            { src: "/screenshots/feature-comms-thread.png", title: "WhatsApp Conversations", desc: "Two-way messaging with every operative. Full message history, delivery status, and inbound replies — all logged automatically." },
-            { src: "/screenshots/assistant.png", title: "Rex AI Assistant", desc: "Ask Rex anything about your workforce in plain English. Search workers, check compliance, view timesheets — through natural conversation." },
-            { src: "/screenshots/documents.png", title: "Document Verification", desc: "AI-powered cert checking with expiry tracking. Verify or reject with reasons. Auto-block non-compliant workers." },
-          ].map((item) => (
-            <div key={item.title} className="space-y-3">
-              <div className="relative rounded-xl overflow-hidden border border-forest-700/20 shadow-xl shadow-black/20 hover:shadow-[0_0_40px_-8px_rgba(193,127,89,0.1)] hover:border-copper-500/15 transition-all duration-500">
-                <div className="bg-forest-800/80 backdrop-blur-sm px-3 py-2 flex items-center gap-2 border-b border-forest-700/20">
-                  <div className="flex gap-1.5">
-                    <div className="w-2 h-2 rounded-full bg-white/10" />
-                    <div className="w-2 h-2 rounded-full bg-white/10" />
-                    <div className="w-2 h-2 rounded-full bg-white/10" />
-                  </div>
-                </div>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={item.src} alt={item.title} className="w-full h-auto" loading="lazy" />
-              </div>
-              <div>
-                <h3 className="font-serif text-base text-white mb-1">{item.title}</h3>
-                <p className="text-xs text-white/50">{item.desc}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Divider */}
-        <div className="my-10 flex items-center gap-4">
-          <div className="flex-1 h-px bg-gradient-to-r from-transparent via-forest-700/30 to-transparent" />
-          <span className="font-mono text-xs uppercase tracking-widest text-white/20">More screens</span>
-          <div className="flex-1 h-px bg-gradient-to-r from-transparent via-forest-700/30 to-transparent" />
-        </div>
-
-        {/* Feature screens grid — row 2 */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {[
-            { src: "/screenshots/sites.png", title: "Site Management", desc: "All active sites with addresses, contacts, headcount, and compliance status. One view across every location you manage." },
-            { src: "/screenshots/allocations.png", title: "Labour Allocations", desc: "See who is allocated where, with trade, dates, and status. Drag-and-drop scheduling across your entire workforce." },
-            { src: "/screenshots/timesheets.png", title: "Timesheets & Payroll", desc: "Auto-generated weekly timesheets with scheduled vs actual hours, WTD flags, and gross pay. Export PDF for payroll in one click." },
-            { src: "/screenshots/feature-shifts.png", title: "Shift Scheduling", desc: "Create and manage shifts by site, trade, and date. See coverage gaps at a glance. Workers receive offers automatically." },
-            { src: "/screenshots/feature-allocation-detail.png", title: "Allocation Detail", desc: "Drill into any allocation to see worker details, shift history, compliance status, and communication timeline." },
-            { src: "/screenshots/feature-audit-log.png", title: "Audit Trail", desc: "Every action logged. Document verifications, status changes, message sends, and compliance decisions — all timestamped and exportable." },
-          ].map((item) => (
-            <div key={item.title} className="space-y-3">
-              <div className="relative rounded-xl overflow-hidden border border-forest-700/20 shadow-xl shadow-black/20 hover:shadow-[0_0_40px_-8px_rgba(193,127,89,0.1)] hover:border-copper-500/15 transition-all duration-500">
-                <div className="bg-forest-800/80 backdrop-blur-sm px-3 py-2 flex items-center gap-2 border-b border-forest-700/20">
-                  <div className="flex gap-1.5">
-                    <div className="w-2 h-2 rounded-full bg-white/10" />
-                    <div className="w-2 h-2 rounded-full bg-white/10" />
-                    <div className="w-2 h-2 rounded-full bg-white/10" />
-                  </div>
-                </div>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={item.src} alt={item.title} className="w-full h-auto" loading="lazy" />
-              </div>
-              <div>
-                <h3 className="font-serif text-base text-white mb-1">{item.title}</h3>
-                <p className="text-xs text-white/50">{item.desc}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <div className="mt-10 text-center">
+        <div className="max-w-3xl mx-auto text-center">
+          <SectionLabel>The Dashboard</SectionLabel>
+          <SectionTitle>Built to be shown, not described</SectionTitle>
+          <p className="text-lg text-white/60 leading-relaxed mb-10">
+            Pangea is a platform you need to see to appreciate. Book a 30-minute walkthrough and we&apos;ll show you exactly how it works — tailored to your sites, your workers, and your way of operating.
+          </p>
           <Link
-            href="/platform"
-            className="text-copper-400 hover:text-copper-300 font-semibold text-sm transition-colors inline-flex items-center gap-2"
+            href="/demo"
+            className="bg-copper-500 hover:bg-copper-600 text-white font-semibold px-10 py-4 rounded-lg transition-colors text-lg inline-block"
           >
-            See all 15 platform screens
-            <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
+            Book a Demo
           </Link>
         </div>
       </Section>
@@ -1056,7 +961,7 @@ export default function HomePage() {
                 <IconHardHat className="w-7 h-7 text-copper-400" />
               </div>
               <blockquote className="font-serif text-2xl sm:text-3xl lg:text-4xl text-white/80 italic leading-relaxed mb-8">
-                &ldquo;We were spending two full days a week just chasing CSCS cards and right-to-work documents. Now it happens automatically on WhatsApp. The workers actually respond.&rdquo;
+                &ldquo;We were spending two full days a week just chasing CSCS cards and right-to-work documents. Now it happens automatically. The workers actually respond.&rdquo;
               </blockquote>
               <div className="text-base text-white/50">
                 — Operations Manager, UK Labour Provider
