@@ -357,7 +357,7 @@ export default function HomePage() {
       <section className="relative min-h-screen flex items-center pt-16 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--color-forest-700)_0%,_transparent_60%)] opacity-40" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--color-copper-900)_0%,_transparent_50%)] opacity-20" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-32">
+        <div className="relative max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 py-20 sm:py-32">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <span className="inline-block font-mono text-[0.7rem] sm:text-[0.8rem] font-semibold uppercase tracking-[0.2em] text-copper-400 mb-8">
@@ -425,56 +425,48 @@ export default function HomePage() {
 
       {/* Problem */}
       <Section>
-        <div className="max-w-3xl mx-auto text-center">
-          <SectionLabel>The Problem</SectionLabel>
-          <SectionTitle className="text-center">
-            Broken systems are holding you back
-          </SectionTitle>
-          <p className="text-lg text-white/55 leading-[1.8] mb-10">
-            Construction businesses are being held back by broken systems. Companies and recruitment agencies managing 50+ workers are stuck between spreadsheets and expensive software — with little real-time worker visibility, constant admin, and compliance risks that are easy to miss. One expired CSCS card can cost £875. Multiple gaps can shut a site down. And with HMRC tightening CIS rules, the financial exposure is only getting worse.
-          </p>
-          <div className="grid sm:grid-cols-3 gap-5 mt-14">
-            <div className="bg-forest-800/30 backdrop-blur-sm rounded-2xl p-7 border border-forest-700/10 hover:border-copper-500/15 transition-all duration-500">
-              <div className="w-10 h-10 rounded-xl bg-copper-500/8 border border-copper-500/15 flex items-center justify-center mb-5 mx-auto">
-                <IconShield className="w-5 h-5 text-copper-400" />
+        <SectionLabel>The Problem</SectionLabel>
+        <SectionTitle>Broken systems are holding you back</SectionTitle>
+        <p className="text-lg text-white/50 leading-[1.8] max-w-3xl mb-16">
+          Construction businesses are being held back by broken systems. Companies and recruitment agencies managing 50+ workers are stuck between spreadsheets and expensive software — with little real-time worker visibility, constant admin, and compliance risks that are easy to miss. One expired CSCS card can cost £875. Multiple gaps can shut a site down. And with HMRC tightening CIS rules, the financial exposure is only getting worse.
+        </p>
+        <div className="grid sm:grid-cols-3 gap-5">
+          {[
+            { icon: IconShield, value: "£875+", text: "Minimum HSE fine per incident. 96% conviction rate. £33M in fines last year." },
+            { icon: IconPound, value: "15–20%", text: "Agency markup per worker per hour — an ongoing cost most companies accept as unavoidable." },
+            { icon: IconClock, value: "£1,500", text: "Lost per employee per year to paperwork — reading, filling, and chasing mislaid documents (Re-flow/YouGov, 2019)." },
+          ].map((item) => {
+            const Icon = item.icon;
+            return (
+              <div key={item.value} className="bg-forest-800/30 backdrop-blur-sm rounded-2xl p-8 border border-forest-700/10">
+                <div className="w-10 h-10 rounded-xl bg-copper-500/8 border border-copper-500/15 flex items-center justify-center mb-6">
+                  <Icon className="w-5 h-5 text-copper-400" />
+                </div>
+                <div className="font-serif text-3xl text-copper-400 mb-3">{item.value}</div>
+                <div className="text-sm text-white/45 leading-[1.7]">{item.text}</div>
               </div>
-              <div className="font-serif text-2xl text-copper-400 mb-2">£875+</div>
-              <div className="text-sm text-white/50 leading-relaxed">Minimum HSE fine per incident. 96% conviction rate. £33M in fines last year.</div>
-            </div>
-            <div className="bg-forest-800/30 backdrop-blur-sm rounded-2xl p-7 border border-forest-700/10 hover:border-copper-500/15 transition-all duration-500">
-              <div className="w-10 h-10 rounded-xl bg-copper-500/8 border border-copper-500/15 flex items-center justify-center mb-5 mx-auto">
-                <IconPound className="w-5 h-5 text-copper-400" />
-              </div>
-              <div className="font-serif text-2xl text-copper-400 mb-2">15–20%</div>
-              <div className="text-sm text-white/50 leading-relaxed">Agency markup per worker per hour — an ongoing cost most companies accept as unavoidable</div>
-            </div>
-            <div className="bg-forest-800/30 backdrop-blur-sm rounded-2xl p-7 border border-forest-700/10 hover:border-copper-500/15 transition-all duration-500">
-              <div className="w-10 h-10 rounded-xl bg-copper-500/8 border border-copper-500/15 flex items-center justify-center mb-5 mx-auto">
-                <IconClock className="w-5 h-5 text-copper-400" />
-              </div>
-              <div className="font-serif text-2xl text-copper-400 mb-2">£1,500</div>
-              <div className="text-sm text-white/50 leading-relaxed">Lost per employee per year to paperwork — reading, filling, and chasing mislaid documents (Re-flow/YouGov, 2019)</div>
-            </div>
-          </div>
+            );
+          })}
         </div>
       </Section>
 
       {/* See it in action — CTA */}
-      <Section dark>
-        <div className="max-w-3xl mx-auto text-center">
+      <section className="relative py-20 sm:py-24 overflow-hidden bg-forest-800 noise-overlay">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--color-copper-900)_0%,_transparent_60%)] opacity-10 pointer-events-none" />
+        <div className="relative z-10 max-w-2xl mx-auto px-5 sm:px-8 text-center">
           <SectionLabel>See the Platform</SectionLabel>
-          <SectionTitle>See it for yourself</SectionTitle>
-          <p className="text-lg text-white/60 leading-relaxed mb-10">
-            Pangea is best experienced live. Book a 30-minute demo and we&apos;ll walk you through the platform — tailored to your business, your workforce, and the problems you&apos;re actually trying to solve.
+          <h2 className="font-serif text-2xl sm:text-3xl text-white mb-5">See it for yourself</h2>
+          <p className="text-base text-white/45 leading-[1.7] mb-8">
+            Pangea is best experienced live. Book a 30-minute demo tailored to your business.
           </p>
           <Link
             href="/demo"
-            className="bg-copper-500 hover:bg-copper-400 text-white font-semibold px-10 py-4 rounded-lg transition-all duration-300 text-base inline-block shadow-[0_2px_16px_-4px_rgba(193,127,89,0.35)] hover:shadow-[0_4px_24px_-4px_rgba(193,127,89,0.5)]"
+            className="bg-copper-500 hover:bg-copper-400 text-white font-semibold px-8 py-3.5 rounded-lg transition-all duration-300 text-sm inline-block shadow-[0_2px_16px_-4px_rgba(193,127,89,0.3)] hover:shadow-[0_4px_24px_-4px_rgba(193,127,89,0.45)]"
           >
             Book a Demo
           </Link>
         </div>
-      </Section>
+      </section>
 
       {/* Built for today */}
       <Section dark>
@@ -522,7 +514,7 @@ export default function HomePage() {
 
       {/* Who it's for */}
       <Section>
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl">
           <SectionLabel>Who It&apos;s For</SectionLabel>
           <SectionTitle>If this is how you&apos;re running your workforce, something needs to change</SectionTitle>
           <div className="grid sm:grid-cols-2 gap-x-10 gap-y-6 mt-12">
@@ -553,7 +545,7 @@ export default function HomePage() {
               ))}
             </div>
           </div>
-          <p className="text-center text-white/45 text-sm mt-10">
+          <p className="text-white/40 text-sm mt-10 max-w-lg">
             If even two of these sound familiar, you&apos;re not alone — and it&apos;s costing you time, money, and control.
           </p>
           <div className="mt-12 bg-forest-800/30 backdrop-blur-sm rounded-2xl p-10 border border-copper-500/10 hover:border-copper-500/20 transition-all duration-500">
@@ -808,7 +800,7 @@ export default function HomePage() {
 
       {/* How it works */}
       <Section dark>
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-3xl">
           <SectionLabel>How It Works</SectionLabel>
           <SectionTitle>Three steps. Zero paperwork.</SectionTitle>
           <div className="space-y-12 mt-12">
@@ -848,14 +840,11 @@ export default function HomePage() {
 
       {/* Cost savings */}
       <Section>
-        <div className="max-w-4xl mx-auto text-center">
-          <SectionLabel>The Cost Saving</SectionLabel>
-          <SectionTitle className="text-center">
-            See what Pangea saves your business
-          </SectionTitle>
-          <p className="text-lg text-white/60 mb-12 max-w-2xl mx-auto">
-            Every business is different. But the cost of doing nothing is always the same: wasted hours, compliance risk, and money leaving your business every week. Here&apos;s where it goes.
-          </p>
+        <SectionLabel>The Cost Saving</SectionLabel>
+        <SectionTitle>See what Pangea saves your business</SectionTitle>
+        <p className="text-lg text-white/45 leading-[1.7] max-w-2xl mb-14">
+          Every business is different. But the cost of doing nothing is always the same: wasted hours, compliance risk, and money leaving your business every week.
+        </p>
           <div className="grid sm:grid-cols-3 gap-6">
             <div className="bg-forest-800/30 backdrop-blur-sm rounded-2xl p-8 border border-forest-700/10 hover:border-copper-500/15 transition-all duration-500 text-left">
               <div className="w-10 h-10 rounded-lg bg-copper-500/10 border border-copper-500/20 flex items-center justify-center mb-4">
@@ -888,14 +877,13 @@ export default function HomePage() {
               </p>
             </div>
           </div>
-          <div className="mt-10">
-            <Link
-              href="/demo"
-              className="inline-flex items-center gap-2 bg-copper-500 hover:bg-copper-400 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 text-base shadow-[0_2px_16px_-4px_rgba(193,127,89,0.35)] hover:shadow-[0_4px_24px_-4px_rgba(193,127,89,0.5)]"
-            >
-              <IconTrendingUp className="w-5 h-5" /> Calculate Your Savings
-            </Link>
-          </div>
+        <div className="mt-12">
+          <Link
+            href="/demo"
+            className="inline-flex items-center gap-2 bg-copper-500 hover:bg-copper-400 text-white font-semibold px-8 py-3.5 rounded-lg transition-all duration-300 text-sm shadow-[0_2px_16px_-4px_rgba(193,127,89,0.3)] hover:shadow-[0_4px_24px_-4px_rgba(193,127,89,0.45)]"
+          >
+            <IconTrendingUp className="w-4 h-4" /> Calculate Your Savings
+          </Link>
         </div>
       </Section>
 
@@ -931,47 +919,39 @@ export default function HomePage() {
         </div>
       </Section>
 
-      {/* Platform — Book a Demo CTA (screenshots removed per Donna's feedback) */}
-      <Section>
-        <div className="max-w-3xl mx-auto text-center">
+      {/* Platform — Book a Demo CTA */}
+      <section className="relative py-20 sm:py-24 overflow-hidden bg-forest-900 noise-overlay">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--color-copper-900)_0%,_transparent_60%)] opacity-8 pointer-events-none" />
+        <div className="relative z-10 max-w-2xl mx-auto px-5 sm:px-8 text-center">
           <SectionLabel>The Dashboard</SectionLabel>
-          <SectionTitle>Built to be shown, not described</SectionTitle>
-          <p className="text-lg text-white/60 leading-relaxed mb-10">
-            Pangea is a platform you need to see to appreciate. Book a 30-minute walkthrough and we&apos;ll show you exactly how it works — tailored to your sites, your workers, and your way of operating.
+          <h2 className="font-serif text-2xl sm:text-3xl text-white mb-5">Built to be shown, not described</h2>
+          <p className="text-base text-white/45 leading-[1.7] mb-8">
+            Book a 30-minute walkthrough tailored to your sites, your workers, and your way of operating.
           </p>
           <Link
             href="/demo"
-            className="bg-copper-500 hover:bg-copper-400 text-white font-semibold px-10 py-4 rounded-lg transition-all duration-300 text-base inline-block shadow-[0_2px_16px_-4px_rgba(193,127,89,0.35)] hover:shadow-[0_4px_24px_-4px_rgba(193,127,89,0.5)]"
+            className="bg-copper-500 hover:bg-copper-400 text-white font-semibold px-8 py-3.5 rounded-lg transition-all duration-300 text-sm inline-block shadow-[0_2px_16px_-4px_rgba(193,127,89,0.3)] hover:shadow-[0_4px_24px_-4px_rgba(193,127,89,0.45)]"
           >
             Book a Demo
           </Link>
         </div>
-      </Section>
+      </section>
 
       {/* Testimonials */}
       <Section>
-        <div className="max-w-3xl mx-auto text-center">
+        <div className="max-w-3xl">
           <SectionLabel>Trusted by Construction</SectionLabel>
-          <SectionTitle className="text-center">
-            Built with the industry, for the industry
-          </SectionTitle>
-          <p className="text-lg text-white/60 mb-12">
-            Pangea was developed alongside real construction labour providers managing hundreds of workers across multiple sites.
-          </p>
-          <div className="relative bg-forest-800/30 backdrop-blur-md rounded-2xl p-12 sm:p-16 border border-copper-500/10 shadow-[0_0_80px_-20px_rgba(193,127,89,0.08)] overflow-hidden">
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--color-copper-900)_0%,_transparent_60%)] opacity-10 pointer-events-none" />
-            {/* Decorative quote mark */}
-            <svg className="absolute top-6 left-6 w-32 h-32 text-copper-500/[0.08] pointer-events-none" viewBox="0 0 100 100" fill="currentColor">
+          <SectionTitle>Built with the industry, for the industry</SectionTitle>
+          <div className="relative bg-forest-800/20 backdrop-blur-sm rounded-2xl p-10 sm:p-14 border border-copper-500/8 overflow-hidden mt-12">
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_var(--color-copper-900)_0%,_transparent_70%)] opacity-8 pointer-events-none" />
+            <svg className="absolute top-4 left-4 w-24 h-24 text-copper-500/[0.06] pointer-events-none" viewBox="0 0 100 100" fill="currentColor">
               <path d="M30 65c-8 0-14-3-18-9S6 44 6 36c0-10 3-18 9-24S28 2 38 2v14c-6 0-11 2-14 5s-5 8-5 13h11c4 0 7 1 9 4s3 6 3 10v7c0 4-1 7-3 10s-5 4-9 4zm46 0c-8 0-14-3-18-9S52 44 52 36c0-10 3-18 9-24S74 2 84 2v14c-6 0-11 2-14 5s-5 8-5 13h11c4 0 7 1 9 4s3 6 3 10v7c0 4-1 7-3 10s-5 4-9 4z" />
             </svg>
             <div className="relative">
-              <div className="w-14 h-14 rounded-full bg-copper-500/10 border border-copper-500/20 flex items-center justify-center mx-auto mb-8 animate-pulse-glow">
-                <IconHardHat className="w-7 h-7 text-copper-400" />
-              </div>
-              <blockquote className="font-serif text-xl sm:text-2xl lg:text-3xl text-white/75 italic leading-[1.5] mb-8">
+              <blockquote className="font-serif text-xl sm:text-2xl text-white/70 italic leading-[1.6] mb-6">
                 &ldquo;We were spending two full days a week just chasing CSCS cards and right-to-work documents. Now it happens automatically. The workers actually respond.&rdquo;
               </blockquote>
-              <div className="text-base text-white/50">
+              <div className="text-sm text-white/40">
                 — Operations Manager, UK Labour Provider
               </div>
             </div>
