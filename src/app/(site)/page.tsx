@@ -36,13 +36,13 @@ const stats = [
 
 const features = [
   {
-    title: "WhatsApp Onboarding",
-    description: "Workers onboard via WhatsApp or SMS. No apps to download, no portals to navigate. Collect certs, right-to-work, and H&S sign-off in minutes — not days.",
+    title: "Automated Onboarding",
+    description: "Workers onboard through messaging — no apps to download, no portals to navigate. Collect certs, right to work, and H&S sign-off in minutes, not days.",
     icon: IconMessage,
     details: [
       "7-step AI qualification flow",
       "Multi-language (EN, PL, RO)",
-      "Secure doc upload via messaging",
+      "Secure document upload",
       "QR code & link invitations",
     ],
   },
@@ -59,7 +59,7 @@ const features = [
   },
   {
     title: "Compliance Automation",
-    description: "Automatic expiry tracking, WhatsApp chase sequences, and blocking rules. One missed cert can shut a site down — Pangea makes sure it never happens.",
+    description: "Automatic expiry tracking, chase sequences, and blocking rules. One missed cert can shut a site down — Pangea makes sure it never happens.",
     icon: IconShield,
     details: [
       "90/30/7-day expiry alerts",
@@ -445,15 +445,15 @@ export default function HomePage() {
               <div className="w-10 h-10 rounded-lg bg-copper-500/10 border border-copper-500/20 flex items-center justify-center mb-4 mx-auto">
                 <IconPound className="w-5 h-5 text-copper-400" />
               </div>
-              <div className="font-serif text-2xl text-copper-400 mb-2">30–40%</div>
+              <div className="font-serif text-2xl text-copper-400 mb-2">15–20%</div>
               <div className="text-sm text-white/60">Agency markup per worker per hour — an ongoing cost most companies accept as unavoidable</div>
             </div>
             <div className="bg-forest-800/40 backdrop-blur-sm rounded-xl p-6 border border-forest-700/20 hover:border-copper-500/20 hover:bg-forest-800/60 transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_30px_-5px_rgba(193,127,89,0.15)]">
               <div className="w-10 h-10 rounded-lg bg-copper-500/10 border border-copper-500/20 flex items-center justify-center mb-4 mx-auto">
                 <IconClock className="w-5 h-5 text-copper-400" />
               </div>
-              <div className="font-serif text-2xl text-copper-400 mb-2">15–30 hrs</div>
-              <div className="text-sm text-white/60">Per week spent on admin, chasing docs, and manual onboarding. In recruitment, that&apos;s your resourcer AND admin team combined.</div>
+              <div className="font-serif text-2xl text-copper-400 mb-2">£1,500</div>
+              <div className="text-sm text-white/60">Lost per employee per year to paperwork — reading, filling, and chasing mislaid documents (Re-flow/YouGov, 2019)</div>
             </div>
           </div>
         </div>
