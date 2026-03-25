@@ -101,14 +101,11 @@ const fines = [
   { body: "HSE", type: "Prosecution fines", amount: "\u00a333M total", severity: "high" as const },
   { body: "HSE", type: "CDM 2015 breach", amount: "Up to \u00a3800K+", severity: "high" as const },
   { body: "BSR", type: "Building Safety Act breach", amount: "Unlimited", severity: "critical" as const },
-  { body: "OSHA", type: "Serious violation", amount: "$16,131", severity: "medium" as const },
-  { body: "OSHA", type: "Willful violation", amount: "$161,323", severity: "critical" as const },
-  { body: "ICE/USCIS", type: "I-9 violation", amount: "$272\u2013$27,457", severity: "medium" as const },
 ];
 
 const automationFeatures = [
   { title: "Expiry Tracking", desc: "Every document expiry date is monitored. Automatic alerts at 90, 30, and 7 days before expiry.", icon: IconClock },
-  { title: "Chase Sequences", desc: "Workers with missing or expired documents receive automatic WhatsApp reminders until resolved.", icon: IconMessage },
+  { title: "Chase Sequences", desc: "Workers with missing or expired documents receive automatic reminders until resolved.", icon: IconMessage },
   { title: "Auto-Block", desc: "Non-compliant workers are automatically blocked from new site allocations. No manual intervention needed.", icon: IconLock },
   { title: "Audit Export", desc: "One-click CSV export of all compliance data. Ready for HSE inspection in seconds.", icon: IconFileCheck },
 ];

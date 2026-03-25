@@ -662,26 +662,29 @@ export default function HomePage() {
         </div>
       </Section>
 
-      {/* WhatsApp Flows */}
+      {/* Multi-channel Workflows */}
       <Section>
         <SectionLabel>Live Workflows</SectionLabel>
-        <SectionTitle>See what your workers see</SectionTitle>
+        <SectionTitle>Multiple channels. One system.</SectionTitle>
         <SectionDescription>
-          Real WhatsApp conversations powered by Pangea. Workers onboard, accept shifts, and resolve issues — all without leaving their messaging app.
+          Pangea works across WhatsApp, SMS, and Telegram — meeting workers and site managers on the tools they already use. Every conversation is logged, every action tracked.
         </SectionDescription>
 
         <div className="grid gap-12 md:grid-cols-3 md:gap-8 lg:gap-12 items-start">
-          {/* Flow 1: Qualification */}
+          {/* Flow 1: WhatsApp — Qualification */}
           <div className="space-y-6">
             <div>
               <div className="flex items-center gap-3 mb-3">
                 <div className="w-8 h-8 rounded-lg bg-copper-500/10 border border-copper-500/20 flex items-center justify-center">
                   <IconMessage className="w-4 h-4 text-copper-400" />
                 </div>
-                <h3 className="font-serif text-lg text-white">AI Qualification</h3>
+                <div>
+                  <h3 className="font-serif text-lg text-white">AI Qualification</h3>
+                  <span className="font-mono text-[0.6rem] uppercase tracking-wider text-white/30">via WhatsApp</span>
+                </div>
               </div>
               <p className="text-sm text-white/50 mb-4">
-                Amber qualifies new applicants through natural conversation. Trade, experience, CSCS, and right-to-work — checked in under 4 minutes.
+                Amber qualifies new applicants through natural conversation. Trade, experience, CSCS, and right to work — checked in under 4 minutes.
               </p>
             </div>
             <div className="flex justify-center">
@@ -693,14 +696,17 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Flow 2: Shift Offer */}
+          {/* Flow 2: SMS — Shift Offer */}
           <div className="space-y-6">
             <div>
               <div className="flex items-center gap-3 mb-3">
                 <div className="w-8 h-8 rounded-lg bg-copper-500/10 border border-copper-500/20 flex items-center justify-center">
                   <IconClipboard className="w-4 h-4 text-copper-400" />
                 </div>
-                <h3 className="font-serif text-lg text-white">Shift Offer</h3>
+                <div>
+                  <h3 className="font-serif text-lg text-white">Shift Offer</h3>
+                  <span className="font-mono text-[0.6rem] uppercase tracking-wider text-white/30">via SMS</span>
+                </div>
               </div>
               <p className="text-sm text-white/50 mb-4">
                 Workers receive shift offers with full details. One-word reply to confirm. Induction link sent automatically.
@@ -708,25 +714,28 @@ export default function HomePage() {
             </div>
             <div className="flex justify-center">
               <WhatsAppChat
-                contactName="Pangea"
-                contactStatus="online"
+                contactName="Pangea SMS"
+                contactStatus="automated"
                 messages={shiftOfferMessages}
                 variant="galaxy"
               />
             </div>
           </div>
 
-          {/* Flow 3: NCR + Replacement */}
+          {/* Flow 3: Telegram — Site Manager NCR */}
           <div className="space-y-6">
             <div>
               <div className="flex items-center gap-3 mb-3">
                 <div className="w-8 h-8 rounded-lg bg-copper-500/10 border border-copper-500/20 flex items-center justify-center">
                   <IconZap className="w-4 h-4 text-copper-400" />
                 </div>
-                <h3 className="font-serif text-lg text-white">Incident + Replacement</h3>
+                <div>
+                  <h3 className="font-serif text-lg text-white">Incident + Replacement</h3>
+                  <span className="font-mono text-[0.6rem] uppercase tracking-wider text-white/30">via Telegram</span>
+                </div>
               </div>
               <p className="text-sm text-white/50 mb-4">
-                Site manager reports a no-show. System logs the NCR, searches the pool, and sends a replacement — all in under 5 minutes.
+                Site manager reports a no-show via Telegram. System logs the NCR, searches the pool, and sends a replacement — all in under 5 minutes.
               </p>
             </div>
             <div className="flex justify-center">

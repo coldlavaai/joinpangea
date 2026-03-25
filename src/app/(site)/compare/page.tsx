@@ -13,9 +13,9 @@ import {
 } from "@/components/icons";
 
 export const metadata: Metadata = {
-  title: "Pangea vs Competitors",
+  title: "How Pangea Compares",
   description:
-    "Compare Pangea against Boxcore, GoContractor, WorkBright, SmartBarrel, Bullhorn, Eploy, Access Group, and Workable. Built for labour-driven industries. Designed for total control.",
+    "See how Pangea compares to generic HR platforms, recruitment CRMs, and enterprise workforce tools. Built specifically for labour-driven industries.",
 };
 
 function IconX({ className = "w-4 h-4" }: { className?: string }) {
@@ -26,82 +26,66 @@ function IconX({ className = "w-4 h-4" }: { className?: string }) {
   );
 }
 
-function IconMinus({ className = "w-4 h-4" }: { className?: string }) {
-  return (
-    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-      <path d="M5 12h14" />
-    </svg>
-  );
-}
-
-const competitors = [
+const existingSolutions = [
   {
-    name: "Boxcore",
-    category: "Construction workforce management",
-    limitation: "Basic scheduling and compliance without AI. No WhatsApp integration, no automated onboarding.",
+    category: "Construction Workforce Tools",
+    limitation: "Basic scheduling and compliance without AI. Limited automation, no intelligent onboarding, no document verification.",
   },
   {
-    name: "GoContractor",
-    category: "Contractor onboarding",
-    limitation: "Portal-based onboarding only. Workers must download an app and complete forms manually. No AI document reading.",
+    category: "Contractor Onboarding Platforms",
+    limitation: "Portal-based onboarding requiring app downloads and manual form filling. No AI document reading. Workers drop off before completing.",
   },
   {
-    name: "WorkBright",
-    category: "HR onboarding",
-    limitation: "Generic HR onboarding tool. Not built for construction or labour-hire. No compliance tracking for CSCS, right-to-work, or trade certs.",
+    category: "Generic HR Onboarding",
+    limitation: "Built for office-based hiring. No understanding of CSCS cards, trade certifications, or site-based compliance requirements.",
   },
   {
-    name: "SmartBarrel",
-    category: "Site access & time tracking",
-    limitation: "Hardware-dependent (kiosks/beacons). Solves time tracking but ignores recruitment, compliance, and workforce communication.",
+    category: "Site Access & Time Tracking",
+    limitation: "Hardware-dependent kiosks and beacons. Solves time tracking but ignores recruitment, compliance, and workforce communication.",
   },
   {
-    name: "Bullhorn",
-    category: "Recruitment CRM",
-    limitation: "Built for white-collar recruitment agencies. Expensive, complex, requires dedicated admin staff. No WhatsApp, no AI onboarding.",
+    category: "Recruitment CRMs",
+    limitation: "Built for white-collar agencies. Expensive, complex, requires dedicated admin. No construction-specific compliance or automated onboarding.",
   },
   {
-    name: "Eploy",
-    category: "Applicant tracking system",
-    limitation: "Enterprise ATS focused on permanent hiring funnels. Not designed for high-volume temp labour or compliance-heavy industries.",
+    category: "Enterprise ATS Platforms",
+    limitation: "Focused on permanent hiring funnels. Not designed for high-volume temp labour or compliance-heavy industries.",
   },
   {
-    name: "Access Group",
-    category: "Enterprise HR & payroll",
-    limitation: "Massive enterprise suite. 6+ month implementation, requires consultants. Overkill for companies with 50+ workers who need speed, not complexity.",
+    category: "Enterprise HR & Payroll Suites",
+    limitation: "Massive implementations — 6+ months, consultants required. Overkill for companies with 50-500 workers who need speed, not complexity.",
   },
   {
-    name: "Workable",
-    category: "Hiring platform",
-    limitation: "Job posting and applicant tracking for office roles. No understanding of construction compliance, trade certs, or site-based workforce management.",
+    category: "General Hiring Platforms",
+    limitation: "Job posting and applicant tracking for office roles. No understanding of construction compliance, trade certs, or site workforce management.",
   },
 ];
 
 const pangeaAdvantages = [
   {
-    feature: "WhatsApp-native onboarding",
-    description: "Workers onboard in under 4 minutes via WhatsApp. No app downloads, no portals, no training. 98% response rate.",
-    competitorGap: "No competitor offers WhatsApp-native onboarding with AI document reading.",
+    feature: "AI-powered onboarding",
+    description: "Workers onboard in under 4 minutes through messaging. No app downloads, no portals, no training required.",
+    competitorGap: "No existing solution offers messaging-native onboarding with AI document reading.",
   },
   {
     feature: "PQQ automation",
-    description: "Pangea stores your health & safety docs, compliance certs, ISO standards, and policies. When a PQQ lands, AI pulls the right answers from your stored data. Tendering and auditing simplified.",
-    competitorGap: "No competitor offers PQQ automation using stored company data.",
+    description: "Pangea stores your health & safety docs, compliance certs, ISO standards, and policies. When a PQQ lands, AI pulls the right answers from your stored data.",
+    competitorGap: "No existing solution offers PQQ automation using stored company data.",
   },
   {
     feature: "CV AI summarisation",
     description: "AI reads, summarises, and white-labels CVs for recruitment agencies. Send professional candidate profiles to clients in seconds, not hours.",
-    competitorGap: "No competitor offers AI-powered CV summarisation for white-label recruitment.",
+    competitorGap: "No existing solution offers AI-powered CV summarisation for white-label recruitment.",
   },
   {
-    feature: "Database cleaning via WhatsApp",
-    description: "Clean and re-engage your entire operative database through WhatsApp outreach. Automated, conversational, and built as a lead magnet for new clients.",
-    competitorGap: "No competitor offers database cleaning as a WhatsApp-based service.",
+    feature: "Automated database cleaning",
+    description: "Clean and re-engage your entire operative database through automated outreach. Conversational re-engagement that updates records and refreshes compliance.",
+    competitorGap: "No existing solution offers automated database cleaning as a built-in service.",
   },
   {
     feature: "Resourcer + admin replacement",
     description: "Pangea handles the work of both your resourcer and admin teams. AI manages candidate sourcing, onboarding, compliance, and shift allocation in one system.",
-    competitorGap: "Competitors solve one piece. Pangea replaces entire roles.",
+    competitorGap: "Existing solutions solve one piece. Pangea replaces entire roles.",
   },
   {
     feature: "Industry-specific AI",
@@ -114,7 +98,7 @@ const comparisonRows = [
   {
     feature: "Worker onboarding",
     competitors: "Portal-based, app downloads, manual forms",
-    pangea: "AI-powered, via WhatsApp, under 4 minutes",
+    pangea: "AI-powered messaging, under 4 minutes",
   },
   {
     feature: "CSCS / cert verification",
@@ -134,7 +118,7 @@ const comparisonRows = [
   {
     feature: "Database cleaning",
     competitors: "Not offered",
-    pangea: "WhatsApp-based outreach, automated re-engagement",
+    pangea: "Automated outreach, conversational re-engagement",
   },
   {
     feature: "Compliance tracking",
@@ -144,12 +128,12 @@ const comparisonRows = [
   {
     feature: "Shift allocation",
     competitors: "Portal-based scheduling",
-    pangea: "WhatsApp broadcast, first-to-accept wins",
+    pangea: "Broadcast offers, first-to-accept wins",
   },
   {
     feature: "Worker communication",
     competitors: "Email, app notifications, portals",
-    pangea: "WhatsApp native (98% response rate)",
+    pangea: "Messaging-native, integrated into every workflow",
   },
   {
     feature: "Setup time",
@@ -167,26 +151,26 @@ const scenarios = [
   {
     icon: IconUsers,
     title: "Your resourcers are drowning",
-    description: "You have resourcers sourcing candidates, admin staff processing paperwork, and managers chasing compliance. Three roles doing what one system should handle. Your competitors are already automating this.",
+    description: "You have resourcers sourcing candidates, admin staff processing paperwork, and managers chasing compliance. Three roles doing what one system should handle.",
     result: "Pangea handles the work of both your resourcer and admin teams. AI sources, onboards, and manages compliance. Your people focus on relationships, not paperwork.",
   },
   {
     icon: IconShield,
     title: "PQQs eat your week",
-    description: "Every tender means digging through folders for your health & safety policy, ISO certs, insurance docs, and compliance records. You answer the same questions differently every time. It takes days.",
-    result: "Pangea stores all your company data — policies, certs, ISO standards — and auto-fills PQQ responses using AI. Tendering goes from days to minutes. Audits are one-click.",
+    description: "Every tender means digging through folders for your health & safety policy, ISO certs, insurance docs, and compliance records. You answer the same questions differently every time.",
+    result: "Pangea stores all your company data — policies, certs, ISO standards — and auto-fills PQQ responses using AI. Tendering goes from days to minutes.",
   },
   {
     icon: IconBot,
     title: "Your database is dead weight",
     description: "You have thousands of operatives on file but half have expired certs, wrong numbers, or haven't worked in years. Your database is a liability, not an asset.",
-    result: "Pangea cleans your database via WhatsApp outreach. Automated, conversational re-engagement that updates records, refreshes compliance, and turns dead data into active workers.",
+    result: "Pangea cleans your database through automated outreach. Conversational re-engagement that updates records, refreshes compliance, and turns dead data into active workers.",
   },
   {
     icon: IconZap,
     title: "You tried generic HR software",
-    description: "You paid for Bullhorn, Workable, or an enterprise ATS. Your team barely uses it. Workers won't download the app. It doesn't understand CSCS cards, trade certs, or site compliance. You're back to spreadsheets.",
-    result: "Pangea is built for your industry. Workers use WhatsApp (already on their phone). AI reads trade cards, tracks compliance, and allocates shifts. Zero learning curve.",
+    description: "You paid for an enterprise ATS or recruitment CRM. Your team barely uses it. Workers won't download the app. It doesn't understand CSCS cards, trade certs, or site compliance. You're back to spreadsheets.",
+    result: "Pangea is built for your industry. Workers communicate through messaging they already use. AI reads trade cards, tracks compliance, and allocates shifts. Zero learning curve.",
   },
 ];
 
@@ -198,34 +182,28 @@ export default function ComparePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionLabel>Compare</SectionLabel>
           <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-white mb-6 max-w-4xl">
-            Get AI into your business
+            Existing solutions weren&apos;t built
             <br />
-            <span className="text-copper-400">or get left behind.</span>
+            <span className="text-copper-400">for your industry.</span>
           </h1>
           <p className="text-lg text-white/60 max-w-2xl mb-4">
-            Built for your industry. Designed for total control. Unlike generic HR platforms and recruitment CRMs, Pangea is purpose-built for labour-driven industries.
-          </p>
-          <p className="text-white/40 max-w-2xl">
-            See how Pangea compares to Boxcore, GoContractor, Bullhorn, and the rest.
+            Generic HR platforms, recruitment CRMs, and enterprise suites don&apos;t understand construction, labour supply, or site-based compliance. Pangea does.
           </p>
         </div>
       </section>
 
-      {/* Competitor grid */}
+      {/* Existing solutions grid */}
       <Section dark>
-        <SectionLabel>The Competition</SectionLabel>
-        <SectionTitle>What they do vs what you need</SectionTitle>
+        <SectionLabel>Existing Solutions</SectionLabel>
+        <SectionTitle>What&apos;s out there — and where it falls short</SectionTitle>
         <p className="text-white/50 max-w-2xl mb-10">
-          Most platforms solve one piece of the puzzle. Pangea replaces entire roles — handling the work of both resourcer and admin teams in one system.
+          Most platforms solve one piece of the puzzle. None of them cover the full lifecycle of workforce management for labour-driven industries.
         </p>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {competitors.map((c) => (
-            <div key={c.name} className="bg-forest-800 rounded-xl border border-forest-700/50 p-5">
-              <h3 className="font-serif text-white text-base mb-1">{c.name}</h3>
-              <span className="font-mono text-[0.6rem] uppercase tracking-wider text-white/30 block mb-3">
-                {c.category}
-              </span>
+          {existingSolutions.map((c) => (
+            <div key={c.category} className="bg-forest-800 rounded-xl border border-forest-700/50 p-5">
+              <h3 className="font-serif text-white text-base mb-1">{c.category}</h3>
               <p className="text-xs text-white/40 leading-relaxed">{c.limitation}</p>
             </div>
           ))}
@@ -245,7 +223,7 @@ export default function ComparePage() {
                   Capability
                 </th>
                 <th className="text-left py-4 px-4 font-mono text-xs uppercase tracking-wider text-white/30 w-[37%]">
-                  Typical Competitors
+                  Existing Solutions
                 </th>
                 <th className="text-left py-4 px-4 font-mono text-xs uppercase tracking-wider text-copper-400 w-[38%]">
                   Pangea
@@ -268,7 +246,7 @@ export default function ComparePage() {
       {/* Unique differentiators */}
       <Section dark>
         <SectionLabel>Only Pangea</SectionLabel>
-        <SectionTitle>Capabilities no competitor offers</SectionTitle>
+        <SectionTitle>Capabilities no existing solution offers</SectionTitle>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
           {pangeaAdvantages.map((a) => (
@@ -330,7 +308,7 @@ export default function ComparePage() {
             Built for your industry. Designed for total control.
           </SectionTitle>
           <p className="text-lg text-white/60 mb-4">
-            Generic HR systems, recruitment CRMs, and enterprise platforms were not built for labour-driven industries. Pangea was. AI-powered onboarding, PQQ automation, CV summarisation, and database cleaning — capabilities no competitor offers.
+            Generic HR systems, recruitment CRMs, and enterprise platforms were not built for labour-driven industries. Pangea was. AI-powered onboarding, PQQ automation, CV summarisation, and database cleaning — capabilities no existing solution offers.
           </p>
           <p className="text-white/40 mb-10">
             Purpose-built for companies with 50+ workers who need to move fast.

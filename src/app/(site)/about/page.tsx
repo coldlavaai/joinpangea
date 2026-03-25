@@ -27,13 +27,13 @@ const timeline = [
     label: "The Problem",
     title: "We saw the gap firsthand",
     description:
-      "Working with construction labour providers, we saw the same pattern everywhere: spreadsheets, WhatsApp groups, filing cabinets of expired certs, and admin teams drowning in paperwork. Enterprise solutions existed but cost a fortune and took months to implement. Small firms had nothing.",
+      "Working with construction labour providers, we saw the same pattern everywhere: spreadsheets, disconnected tools, filing cabinets of expired certs, and admin teams drowning in paperwork. Enterprise solutions existed but cost a fortune and took months to implement. Small firms had nothing.",
   },
   {
     label: "The Insight",
-    title: "Workers are already on WhatsApp",
+    title: "Workers already have the tools they need",
     description:
-      "98% of construction workers have WhatsApp on their phone. They don't want another app. They don't want a portal. The insight was simple: meet workers where they already are, and automate everything else behind the scenes.",
+      "Construction workers don't want another app or portal. They already have messaging on their phone. The insight was simple: meet workers where they already are, and automate everything else behind the scenes.",
   },
   {
     label: "The Build",
@@ -45,7 +45,7 @@ const timeline = [
     label: "Today",
     title: "Ready for the industry's biggest shift",
     description:
-      "The UK needs 240,000+ additional construction workers by 2029. The US faces similar shortages. Companies that can onboard, manage, and retain workers efficiently will win. Pangea gives them the tools to do exactly that.",
+      "The UK needs 240,000+ additional construction workers by 2029. Companies that can onboard, manage, and retain workers efficiently will win. Pangea gives them the tools to do exactly that.",
   },
 ];
 
@@ -58,7 +58,7 @@ const values = [
   {
     icon: IconMessage,
     title: "Meet people where they are",
-    description: "Workers are on WhatsApp. Site managers are on Telegram. Dashboard staff are in the browser. We fit into existing habits, not the other way around.",
+    description: "Workers communicate through messaging. Site managers use simple commands. Dashboard staff get a clean browser interface. We fit into existing habits, not the other way around.",
   },
   {
     icon: IconBot,
@@ -96,7 +96,7 @@ export default function AboutPage() {
             Make professional-grade workforce management accessible to every construction company — not just the ones with six-figure software budgets.
           </blockquote>
           <p className="text-white/50">
-            Pangea brings enterprise capability to the 885,000 UK construction SMEs and 3.97 million US construction firms that are currently running on spreadsheets, WhatsApp groups, and hope.
+            Pangea brings enterprise capability to the 885,000 UK construction SMEs that are currently running on spreadsheets, disconnected tools, and hope.
           </p>
         </div>
       </Section>

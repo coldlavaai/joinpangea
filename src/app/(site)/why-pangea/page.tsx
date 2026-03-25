@@ -13,39 +13,39 @@ const aiProofStats = [
   { value: "25%", label: "AI handles only 25% of unpredictable physical work", source: "Goldman Sachs", icon: IconHardHat },
   { value: "52%", label: "View trade work as less vulnerable than white-collar roles", source: "Industry Survey", icon: IconShield },
   { value: "5.3%", label: "Skilled trades growth rate 2024–2034", source: "BlackRock", icon: IconTrendingUp },
-  { value: "663K+", label: "US construction job openings yearly through 2033", source: "BLS", icon: IconUsers },
+  { value: "240K+", label: "Additional UK construction workers needed by 2029", source: "CITB", icon: IconUsers },
 ];
 
 const migrationStats = [
   { value: "42%", label: "of Gen Z planning blue-collar careers", sub: "37% have bachelor's degrees", icon: IconUsers },
   { value: "40%", label: "of 2025 graduates chose trades over traditional careers", sub: "", icon: IconTrendingUp },
-  { value: "55K", label: "US tech job cuts in 2025 attributed to AI", sub: "Workers flowing into trades", icon: IconZap },
-  { value: "47%", label: "of skilled trades workers out-earn median college grad", sub: "", icon: IconBarChart },
+  { value: "88%", label: "of construction firms still partly paper-based", sub: "RICS 2024", icon: IconZap },
+  { value: "£1,500", label: "lost per employee per year to paperwork", sub: "Re-flow/YouGov", icon: IconBarChart },
 ];
 
 const competitors = [
   {
-    name: "Boxcore",
-    weakness: "Enterprise-focused. Portal/app required. Hardware needed. Overkill for SMEs with <100 workers.",
+    name: "Construction Workforce Tools",
+    weakness: "Enterprise-focused. Portal or app required. Hardware needed. Overkill for SMEs with under 100 workers.",
     pangea: "No app. Messaging-native. Built for 50+ workers. Lower price.",
   },
   {
-    name: "GoContractor",
+    name: "Contractor Onboarding Platforms",
     weakness: "Web portal required. Enterprise sales cycle. General-purpose onboarding.",
-    pangea: "WhatsApp/SMS native. No portal. Construction-specific AI. Faster deployment.",
+    pangea: "Messaging-native. No portal. Construction-specific AI. Faster deployment.",
   },
   {
-    name: "Arcoro",
-    weakness: "Heavy, expensive. Targets 200+ employee firms. Months to implement. Module lock-in.",
+    name: "Enterprise HR Suites",
+    weakness: "Heavy, expensive. Target 200+ employee firms. Months to implement. Module lock-in.",
     pangea: "Lightweight, deploy in days. Focused on the one problem SMEs actually have.",
   },
   {
-    name: "WorkBright",
-    weakness: "Generic — not construction. No cert intelligence. No CSCS verification. Form collection only.",
+    name: "Generic HR Onboarding",
+    weakness: "Not built for construction. No cert intelligence. No CSCS verification. Form collection only.",
     pangea: "Construction-specific AI. Conversational onboarding. Industry knowledge built in.",
   },
   {
-    name: "SmartBarrel",
+    name: "Site Hardware Solutions",
     weakness: "Physical hardware per site. High capex. No remote onboarding capability.",
     pangea: "Pure software. Any phone. No hardware. Remote pre-arrival onboarding.",
   },
@@ -55,7 +55,7 @@ const todayProblems = [
   {
     icon: IconClock,
     title: "Your admin team is drowning",
-    desc: "15–30 hours a week spent chasing certs, checking right-to-work, and manually onboarding. That&apos;s a full-time salary burned on data entry and phone calls.",
+    desc: "£1,500 per employee per year lost to paperwork alone (Re-flow/YouGov). That&apos;s before you count the phone calls, the chasing, and the manual onboarding.",
   },
   {
     icon: IconSearch,
@@ -88,7 +88,7 @@ const pangeaDifference = [
   {
     icon: IconZap,
     title: "Zero learning curve",
-    desc: "Workers use WhatsApp — the app 2 billion people already know. Site managers use simple Telegram commands. Dashboard staff get a clean interface they can learn in an afternoon. No training courses, no manuals.",
+    desc: "Workers use messaging they already have on their phone. Site managers use simple commands. Dashboard staff get a clean interface they can learn in an afternoon. No training courses, no manuals.",
   },
   {
     icon: IconGlobe,
