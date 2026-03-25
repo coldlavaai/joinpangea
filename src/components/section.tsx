@@ -14,9 +14,17 @@ export function Section({
   return (
     <section
       id={id}
-      className={`py-20 sm:py-28 ${dark ? "bg-forest-800" : "bg-forest-900"} ${className}`}
+      className={`relative py-20 sm:py-28 overflow-hidden noise-overlay ${dark ? "bg-forest-800" : "bg-forest-900"} ${className}`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">{children}</div>
+      {/* Atmospheric radial gradient */}
+      <div
+        className={`absolute inset-0 pointer-events-none ${
+          dark
+            ? "bg-[radial-gradient(ellipse_at_bottom_right,_var(--color-forest-700)_0%,_transparent_60%)] opacity-30"
+            : "bg-[radial-gradient(ellipse_at_top_left,_var(--color-copper-900)_0%,_transparent_50%)] opacity-15"
+        }`}
+      />
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">{children}</div>
     </section>
   );
 }

@@ -5,16 +5,24 @@ const footerLinks = {
   Product: [
     { href: "/features", label: "Features" },
     { href: "/platform", label: "Platform" },
-    { href: "/how-it-works", label: "How It Works" },
+    { href: "/integrations", label: "Integrations" },
     { href: "/pricing", label: "Pricing" },
     { href: "/demo", label: "Book a Demo" },
   ],
-  Resources: [
-    { href: "/blog", label: "Blog" },
+  Solutions: [
+    { href: "/industries", label: "Industries" },
+    { href: "/how-it-works", label: "How It Works" },
+    { href: "/compare", label: "Compare" },
     { href: "/compliance", label: "Compliance Guide" },
-    { href: "/why-pangaea", label: "Why Pangaea" },
+    { href: "/why-pangea", label: "Why Pangea" },
+  ],
+  Resources: [
+    { href: "/watch", label: "Watch" },
+    { href: "/blog", label: "Blog" },
+    { href: "/security", label: "Trust & Security" },
   ],
   Company: [
+    { href: "/about", label: "About" },
     { href: "/contact", label: "Contact" },
     { href: "mailto:hello@coldlava.ai", label: "hello@coldlava.ai" },
   ],
@@ -22,14 +30,17 @@ const footerLinks = {
 
 export function Footer() {
   return (
-    <footer className="bg-forest-900 border-t border-forest-700/30">
+    <footer className="relative bg-forest-900 border-t border-forest-700/20">
+      {/* Top glow line */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-copper-500/30 to-transparent" />
+      <div className="absolute top-0 left-1/4 right-1/4 h-8 bg-gradient-to-b from-copper-500/5 to-transparent pointer-events-none" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="space-y-4">
             <Image
-              src="/pangaea-logo-tagline.png"
-              alt="Pangaea — Built on solid ground"
+              src="/pangea-logo-tagline.png"
+              alt="Pangea — Built on solid ground"
               width={180}
               height={60}
               className="h-12 w-auto"
@@ -64,7 +75,7 @@ export function Footer() {
 
         <div className="mt-16 pt-8 border-t border-forest-700/30 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-white/30">
-            &copy; {new Date().getFullYear()} Pangaea. All rights reserved.
+            &copy; {new Date().getFullYear()} Pangea. All rights reserved.
           </p>
           <div className="flex gap-6">
             <Link

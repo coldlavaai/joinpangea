@@ -20,7 +20,7 @@ export function Screenshot({ src, alt, title, description }: ScreenshotProps) {
           </div>
           <div className="flex-1 ml-3">
             <div className="bg-forest-900/50 rounded-md px-3 py-1 max-w-xs">
-              <span className="text-[0.6rem] text-white/30 font-mono">pangaea.app</span>
+              <span className="text-[0.6rem] text-white/30 font-mono">pangea.app</span>
             </div>
           </div>
         </div>
@@ -62,7 +62,7 @@ export function ScreenshotFull({ src, alt, title, description }: ScreenshotProps
           </div>
           <div className="flex-1 ml-3">
             <div className="bg-forest-900/50 rounded-md px-3 py-1 max-w-xs">
-              <span className="text-[0.6rem] text-white/30 font-mono">pangaea.app</span>
+              <span className="text-[0.6rem] text-white/30 font-mono">pangea.app</span>
             </div>
           </div>
         </div>

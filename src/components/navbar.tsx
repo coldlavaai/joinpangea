@@ -6,25 +6,25 @@ import { useState } from "react";
 
 const links = [
   { href: "/features", label: "Features" },
+  { href: "/industries", label: "Industries" },
   { href: "/platform", label: "Platform" },
-  { href: "/how-it-works", label: "How It Works" },
   { href: "/pricing", label: "Pricing" },
-  { href: "/why-pangaea", label: "Why Pangaea" },
-  { href: "/compliance", label: "Compliance" },
-  { href: "/blog", label: "Blog" },
+  { href: "/compare", label: "Compare" },
+  { href: "/about", label: "About" },
+  { href: "/watch", label: "Watch" },
 ];
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-forest-900/90 backdrop-blur-md border-b border-forest-700/50">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-forest-900/80 backdrop-blur-xl border-b border-forest-700/20 shadow-[0_1px_20px_0_rgba(193,127,89,0.05)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center gap-2">
             <Image
-              src="/pangaea-logo.png"
-              alt="Pangaea"
+              src="/pangea-logo.png"
+              alt="Pangea"
               width={140}
               height={36}
               className="h-8 w-auto"
@@ -77,7 +77,7 @@ export function Navbar() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="lg:hidden bg-forest-800 border-t border-forest-700/50 px-4 py-4 space-y-3">
+        <div className="lg:hidden bg-forest-800/60 backdrop-blur-xl border-t border-forest-700/20 px-4 py-4 space-y-3">
           {links.map((l) => (
             <Link
               key={l.href}
