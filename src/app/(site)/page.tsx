@@ -360,31 +360,31 @@ export default function HomePage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-32">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <span className="inline-block font-mono text-sm sm:text-base font-semibold uppercase tracking-widest text-copper-400 mb-6">
+              <span className="inline-block font-mono text-[0.7rem] sm:text-[0.8rem] font-semibold uppercase tracking-[0.2em] text-copper-400 mb-8">
                 Construction & Recruitment Workforce Management
               </span>
-              <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-white leading-[1.1] mb-6">
+              <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-white leading-[1.08] mb-8 tracking-[-0.015em]">
                 Every system says it does{" "}
                 <span className="text-copper-400">everything.</span>
                 <br />
                 None of them do.
               </h1>
-              <p className="text-lg sm:text-xl text-white/60 max-w-2xl mb-4 leading-relaxed">
+              <p className="text-lg sm:text-xl text-white/55 max-w-xl mb-5 leading-[1.7]">
                 From workforce visibility and compliance to messaging, onboarding and admin — fully automated, fully connected, and tailored to how you run your business.
               </p>
-              <p className="text-lg text-copper-400/80 font-light tracking-wide mb-10">
+              <p className="text-base text-copper-400/70 font-light tracking-[0.04em] mb-12">
                 Complete visibility. Total control. Zero guesswork.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/compliance"
-                  className="bg-copper-500 hover:bg-copper-600 text-white font-semibold px-8 py-4 rounded-lg text-center transition-colors text-lg"
+                  className="bg-copper-500 hover:bg-copper-400 text-white font-semibold px-8 py-4 rounded-lg text-center transition-all duration-300 text-base shadow-[0_2px_16px_-4px_rgba(193,127,89,0.35)] hover:shadow-[0_4px_24px_-4px_rgba(193,127,89,0.5)]"
                 >
                   Get Your Free Compliance Score
                 </Link>
                 <Link
                   href="/demo"
-                  className="border border-forest-600 hover:border-forest-400 text-white/80 hover:text-white font-semibold px-8 py-4 rounded-lg text-center transition-colors text-lg"
+                  className="border border-forest-600 hover:border-copper-500/40 text-white/70 hover:text-white font-semibold px-8 py-4 rounded-lg text-center transition-all duration-300 text-base"
                 >
                   Book a Demo
                 </Link>
@@ -404,19 +404,19 @@ export default function HomePage() {
       </section>
 
       {/* Stats bar */}
-      <section className="relative bg-gradient-to-r from-forest-800 via-forest-800/90 to-forest-800 border-y border-forest-700/20 overflow-hidden noise-overlay">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--color-copper-900)_0%,_transparent_70%)] opacity-10 pointer-events-none" />
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+      <section className="relative bg-forest-800 border-y border-forest-700/10 overflow-hidden noise-overlay">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--color-copper-900)_0%,_transparent_70%)] opacity-8 pointer-events-none" />
+        <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 py-14">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5">
             {stats.map((s) => (
-              <div key={s.label} className="bg-forest-800/30 backdrop-blur-sm rounded-xl p-5 border border-forest-700/15 hover:border-copper-500/20 hover:bg-forest-800/50 transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_0_20px_-5px_rgba(193,127,89,0.12)] text-center">
-                <div className="font-serif text-3xl sm:text-4xl text-copper-400 mb-1">
+              <div key={s.label} className="bg-forest-900/30 backdrop-blur-sm rounded-2xl p-6 border border-forest-700/10 hover:border-copper-500/15 transition-all duration-500 text-center group">
+                <div className="font-serif text-2xl sm:text-3xl text-copper-400 mb-2 group-hover:text-copper-300 transition-colors duration-500">
                   {s.value}
                 </div>
-                <div className="font-mono text-xs sm:text-sm uppercase tracking-wider text-white/80 mb-1">
+                <div className="font-mono text-[0.6rem] sm:text-[0.65rem] uppercase tracking-[0.15em] text-white/70 mb-1.5">
                   {s.label}
                 </div>
-                <div className="text-xs sm:text-sm text-white/60">{s.sub}</div>
+                <div className="text-[0.65rem] sm:text-xs text-white/40 leading-snug">{s.sub}</div>
               </div>
             ))}
           </div>
@@ -430,30 +430,30 @@ export default function HomePage() {
           <SectionTitle className="text-center">
             Broken systems are holding you back
           </SectionTitle>
-          <p className="text-lg text-white/60 leading-relaxed mb-8">
+          <p className="text-lg text-white/55 leading-[1.8] mb-10">
             Construction businesses are being held back by broken systems. Companies and recruitment agencies managing 50+ workers are stuck between spreadsheets and expensive software — with little real-time worker visibility, constant admin, and compliance risks that are easy to miss. One expired CSCS card can cost £875. Multiple gaps can shut a site down. And with HMRC tightening CIS rules, the financial exposure is only getting worse.
           </p>
-          <div className="grid sm:grid-cols-3 gap-6 mt-12">
-            <div className="bg-forest-800/40 backdrop-blur-sm rounded-xl p-6 border border-forest-700/20 hover:border-copper-500/20 hover:bg-forest-800/60 transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_30px_-5px_rgba(193,127,89,0.15)]">
-              <div className="w-10 h-10 rounded-lg bg-copper-500/10 border border-copper-500/20 flex items-center justify-center mb-4 mx-auto">
+          <div className="grid sm:grid-cols-3 gap-5 mt-14">
+            <div className="bg-forest-800/30 backdrop-blur-sm rounded-2xl p-7 border border-forest-700/10 hover:border-copper-500/15 transition-all duration-500">
+              <div className="w-10 h-10 rounded-xl bg-copper-500/8 border border-copper-500/15 flex items-center justify-center mb-5 mx-auto">
                 <IconShield className="w-5 h-5 text-copper-400" />
               </div>
               <div className="font-serif text-2xl text-copper-400 mb-2">£875+</div>
-              <div className="text-sm text-white/60">Minimum HSE fine per incident. 96% conviction rate. £33M in fines last year.</div>
+              <div className="text-sm text-white/50 leading-relaxed">Minimum HSE fine per incident. 96% conviction rate. £33M in fines last year.</div>
             </div>
-            <div className="bg-forest-800/40 backdrop-blur-sm rounded-xl p-6 border border-forest-700/20 hover:border-copper-500/20 hover:bg-forest-800/60 transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_30px_-5px_rgba(193,127,89,0.15)]">
-              <div className="w-10 h-10 rounded-lg bg-copper-500/10 border border-copper-500/20 flex items-center justify-center mb-4 mx-auto">
+            <div className="bg-forest-800/30 backdrop-blur-sm rounded-2xl p-7 border border-forest-700/10 hover:border-copper-500/15 transition-all duration-500">
+              <div className="w-10 h-10 rounded-xl bg-copper-500/8 border border-copper-500/15 flex items-center justify-center mb-5 mx-auto">
                 <IconPound className="w-5 h-5 text-copper-400" />
               </div>
               <div className="font-serif text-2xl text-copper-400 mb-2">15–20%</div>
-              <div className="text-sm text-white/60">Agency markup per worker per hour — an ongoing cost most companies accept as unavoidable</div>
+              <div className="text-sm text-white/50 leading-relaxed">Agency markup per worker per hour — an ongoing cost most companies accept as unavoidable</div>
             </div>
-            <div className="bg-forest-800/40 backdrop-blur-sm rounded-xl p-6 border border-forest-700/20 hover:border-copper-500/20 hover:bg-forest-800/60 transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_30px_-5px_rgba(193,127,89,0.15)]">
-              <div className="w-10 h-10 rounded-lg bg-copper-500/10 border border-copper-500/20 flex items-center justify-center mb-4 mx-auto">
+            <div className="bg-forest-800/30 backdrop-blur-sm rounded-2xl p-7 border border-forest-700/10 hover:border-copper-500/15 transition-all duration-500">
+              <div className="w-10 h-10 rounded-xl bg-copper-500/8 border border-copper-500/15 flex items-center justify-center mb-5 mx-auto">
                 <IconClock className="w-5 h-5 text-copper-400" />
               </div>
               <div className="font-serif text-2xl text-copper-400 mb-2">£1,500</div>
-              <div className="text-sm text-white/60">Lost per employee per year to paperwork — reading, filling, and chasing mislaid documents (Re-flow/YouGov, 2019)</div>
+              <div className="text-sm text-white/50 leading-relaxed">Lost per employee per year to paperwork — reading, filling, and chasing mislaid documents (Re-flow/YouGov, 2019)</div>
             </div>
           </div>
         </div>
@@ -469,7 +469,7 @@ export default function HomePage() {
           </p>
           <Link
             href="/demo"
-            className="bg-copper-500 hover:bg-copper-600 text-white font-semibold px-10 py-4 rounded-lg transition-colors text-lg inline-block"
+            className="bg-copper-500 hover:bg-copper-400 text-white font-semibold px-10 py-4 rounded-lg transition-all duration-300 text-base inline-block shadow-[0_2px_16px_-4px_rgba(193,127,89,0.35)] hover:shadow-[0_4px_24px_-4px_rgba(193,127,89,0.5)]"
           >
             Book a Demo
           </Link>
@@ -483,7 +483,7 @@ export default function HomePage() {
         <SectionDescription>
           Pangea brings workforce management, recruitment and payroll into one seamless platform — built specifically for the realities of construction. From first contact to first payment, every stage is handled in one place. Onboarding, compliance checks, right to work, certifications and documentation are structured, automated and fully auditable. Powerful admin controls give complete visibility across projects, workers and agencies, while integrated messaging keeps everyone connected — from office to site — without the noise. For construction companies, recruiters and payroll providers, Pangea replaces fragmented systems with one intelligent platform — reducing risk, saving time and enabling you to scale with confidence.
         </SectionDescription>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {[
             {
               icon: IconTarget,
@@ -508,12 +508,12 @@ export default function HomePage() {
           ].map((item) => {
             const Icon = item.icon;
             return (
-              <div key={item.title} className="bg-forest-800/40 backdrop-blur-sm rounded-xl p-6 border border-forest-700/20 hover:border-copper-500/20 hover:bg-forest-800/60 transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_30px_-5px_rgba(193,127,89,0.15)]">
-                <div className="w-10 h-10 rounded-lg bg-copper-500/10 border border-copper-500/20 flex items-center justify-center mb-4">
+              <div key={item.title} className="bg-forest-900/30 backdrop-blur-sm rounded-2xl p-7 border border-forest-700/10 hover:border-copper-500/15 transition-all duration-500 group">
+                <div className="w-11 h-11 rounded-xl bg-copper-500/8 border border-copper-500/15 flex items-center justify-center mb-5 group-hover:border-copper-500/30 transition-colors duration-500">
                   <Icon className="w-5 h-5 text-copper-400" />
                 </div>
-                <h3 className="font-serif text-base text-white mb-2">{item.title}</h3>
-                <p className="text-sm text-white/50 leading-relaxed">{item.desc}</p>
+                <h3 className="font-serif text-base text-white mb-3">{item.title}</h3>
+                <p className="text-sm text-white/45 leading-[1.7]">{item.desc}</p>
               </div>
             );
           })}
@@ -525,39 +525,39 @@ export default function HomePage() {
         <div className="max-w-4xl mx-auto">
           <SectionLabel>Who It&apos;s For</SectionLabel>
           <SectionTitle>If this is how you&apos;re running your workforce, something needs to change</SectionTitle>
-          <div className="grid sm:grid-cols-2 gap-6 mt-10">
-            <div className="space-y-5">
+          <div className="grid sm:grid-cols-2 gap-x-10 gap-y-6 mt-12">
+            <div className="space-y-6">
               {[
                 "Your business is growing, but onboarding can\u2019t keep up",
                 "You\u2019ve had a compliance scare \u2014 expired CSCS, missed right to work",
                 "Your team spends more time on admin than placing or managing workers",
                 "You\u2019re constantly chasing documents that never come back",
               ].map((item) => (
-                <div key={item} className="flex items-start gap-3">
-                  <IconCheckCircle className="w-5 h-5 text-copper-400 mt-0.5 flex-shrink-0" />
-                  <p className="text-white/70 text-sm leading-relaxed">{item}</p>
+                <div key={item} className="flex items-start gap-4">
+                  <IconCheckCircle className="w-4 h-4 text-copper-400 mt-1 flex-shrink-0 opacity-60" />
+                  <p className="text-white/60 text-sm leading-[1.7]">{item}</p>
                 </div>
               ))}
             </div>
-            <div className="space-y-5">
+            <div className="space-y-6">
               {[
                 "You\u2019re managing labour across multiple sites with no clear visibility",
                 "Site teams need information but can\u2019t access it when they need it",
                 "Your database is outdated, unreliable, and rarely used properly",
                 "You know there\u2019s a better way \u2014 but existing systems are too complex or expensive",
               ].map((item) => (
-                <div key={item} className="flex items-start gap-3">
-                  <IconCheckCircle className="w-5 h-5 text-copper-400 mt-0.5 flex-shrink-0" />
-                  <p className="text-white/70 text-sm leading-relaxed">{item}</p>
+                <div key={item} className="flex items-start gap-4">
+                  <IconCheckCircle className="w-4 h-4 text-copper-400 mt-1 flex-shrink-0 opacity-60" />
+                  <p className="text-white/60 text-sm leading-[1.7]">{item}</p>
                 </div>
               ))}
             </div>
           </div>
-          <p className="text-center text-white/60 text-sm mt-8">
+          <p className="text-center text-white/45 text-sm mt-10">
             If even two of these sound familiar, you&apos;re not alone — and it&apos;s costing you time, money, and control.
           </p>
-          <div className="mt-10 bg-forest-800/40 backdrop-blur-sm rounded-xl p-8 border border-copper-500/20 hover:border-copper-500/30 transition-all duration-300">
-            <p className="text-lg text-white/80 leading-relaxed">
+          <div className="mt-12 bg-forest-800/30 backdrop-blur-sm rounded-2xl p-10 border border-copper-500/10 hover:border-copper-500/20 transition-all duration-500">
+            <p className="text-lg text-white/70 leading-[1.8]">
               <span className="text-copper-400 font-semibold">Built for labour-driven industries. Designed for control.</span> Pangea replaces generic systems with a platform built specifically for construction, recruitment and labour supply — where workforce, compliance and onboarding are critical from day one. No searching through spreadsheets. No relying on disconnected tools. Just structured, reliable information when you need it. Built for businesses managing 50+ workers who need control without the overhead.
             </p>
           </div>
@@ -568,8 +568,8 @@ export default function HomePage() {
       <Section dark>
         <SectionLabel>Why Pangea</SectionLabel>
         <SectionTitle>Three things no other system gives you</SectionTitle>
-        <div className="grid sm:grid-cols-3 gap-8 mt-10 mb-16">
-          <div className="bg-forest-800/40 backdrop-blur-sm rounded-xl p-8 border border-forest-700/20 hover:border-copper-500/20 hover:bg-forest-800/60 transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_30px_-5px_rgba(193,127,89,0.15)] text-center group">
+        <div className="grid sm:grid-cols-3 gap-6 mt-12 mb-20">
+          <div className="bg-forest-900/30 backdrop-blur-sm rounded-2xl p-9 border border-forest-700/10 hover:border-copper-500/15 transition-all duration-500 text-center group">
             <div className="w-14 h-14 rounded-xl bg-copper-500/10 border border-copper-500/20 flex items-center justify-center mb-5 mx-auto group-hover:border-copper-500/40 transition-colors">
               <svg className="w-7 h-7 text-copper-400" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <rect x="12" y="20" width="24" height="20" rx="2" />
@@ -583,7 +583,7 @@ export default function HomePage() {
             <h3 className="font-serif text-xl text-white mb-3">A Clean, Controlled Workforce Database</h3>
             <p className="text-sm text-white/50 leading-relaxed">Every worker verified, compliant, skills-graded and ready for site. No duplicate records. No outdated information. No guesswork — just a workforce you can rely on.</p>
           </div>
-          <div className="bg-forest-800/40 backdrop-blur-sm rounded-xl p-8 border border-forest-700/20 hover:border-copper-500/20 hover:bg-forest-800/60 transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_30px_-5px_rgba(193,127,89,0.15)] text-center group">
+          <div className="bg-forest-900/30 backdrop-blur-sm rounded-2xl p-9 border border-forest-700/10 hover:border-copper-500/15 transition-all duration-500 text-center group">
             <div className="w-14 h-14 rounded-xl bg-copper-500/10 border border-copper-500/20 flex items-center justify-center mb-5 mx-auto group-hover:border-copper-500/40 transition-colors">
               <svg className="w-7 h-7 text-copper-400" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <circle cx="24" cy="24" r="10" />
@@ -596,7 +596,7 @@ export default function HomePage() {
             <h3 className="font-serif text-xl text-white mb-3">Real-Time Workforce Visibility</h3>
             <p className="text-sm text-white/50 leading-relaxed">Know who&apos;s working, where they are, and whether they&apos;re compliant — in real time. Linked to timesheets, payroll and communication, all in one place. No blind spots.</p>
           </div>
-          <div className="bg-forest-800/40 backdrop-blur-sm rounded-xl p-8 border border-forest-700/20 hover:border-copper-500/20 hover:bg-forest-800/60 transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_30px_-5px_rgba(193,127,89,0.15)] text-center group">
+          <div className="bg-forest-900/30 backdrop-blur-sm rounded-2xl p-9 border border-forest-700/10 hover:border-copper-500/15 transition-all duration-500 text-center group">
             <div className="w-14 h-14 rounded-xl bg-copper-500/10 border border-copper-500/20 flex items-center justify-center mb-5 mx-auto group-hover:border-copper-500/40 transition-colors">
               <svg className="w-7 h-7 text-copper-400" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M24 8a16 16 0 0113.86 8" />
@@ -626,7 +626,7 @@ export default function HomePage() {
             return (
               <div
                 key={f.title}
-                className="bg-forest-800/40 backdrop-blur-sm rounded-xl p-8 border border-forest-700/20 hover:border-copper-500/20 hover:bg-forest-800/60 transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_30px_-5px_rgba(193,127,89,0.15)] group"
+                className="bg-forest-900/30 backdrop-blur-sm rounded-2xl p-8 border border-forest-700/10 hover:border-copper-500/15 transition-all duration-500 group"
               >
                 <div className="w-12 h-12 rounded-lg bg-copper-500/10 border border-copper-500/20 flex items-center justify-center mb-5">
                   <Icon className="w-6 h-6 text-copper-400" />
@@ -857,7 +857,7 @@ export default function HomePage() {
             Every business is different. But the cost of doing nothing is always the same: wasted hours, compliance risk, and money leaving your business every week. Here&apos;s where it goes.
           </p>
           <div className="grid sm:grid-cols-3 gap-6">
-            <div className="bg-forest-800/40 backdrop-blur-sm rounded-xl p-8 border border-forest-700/20 hover:border-copper-500/20 hover:bg-forest-800/60 transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_30px_-5px_rgba(193,127,89,0.15)] text-left">
+            <div className="bg-forest-800/30 backdrop-blur-sm rounded-2xl p-8 border border-forest-700/10 hover:border-copper-500/15 transition-all duration-500 text-left">
               <div className="w-10 h-10 rounded-lg bg-copper-500/10 border border-copper-500/20 flex items-center justify-center mb-4">
                 <IconShield className="w-5 h-5 text-copper-400" />
               </div>
@@ -867,7 +867,7 @@ export default function HomePage() {
                 Per incident. HSE prosecutes with a 96% conviction rate. One expired CSCS card, one missed right-to-work check, one uninducted worker on site. Pangea tracks it all automatically.
               </p>
             </div>
-            <div className="bg-forest-800/40 backdrop-blur-sm rounded-xl p-8 border border-forest-700/20 hover:border-copper-500/20 hover:bg-forest-800/60 transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_30px_-5px_rgba(193,127,89,0.15)] text-left">
+            <div className="bg-forest-800/30 backdrop-blur-sm rounded-2xl p-8 border border-forest-700/10 hover:border-copper-500/15 transition-all duration-500 text-left">
               <div className="w-10 h-10 rounded-lg bg-copper-500/10 border border-copper-500/20 flex items-center justify-center mb-4">
                 <IconPound className="w-5 h-5 text-copper-400" />
               </div>
@@ -877,7 +877,7 @@ export default function HomePage() {
                 Per worker, per hour, ongoing. Build your own compliant labour pool and reduce your dependency on agencies. The savings compound every single week.
               </p>
             </div>
-            <div className="bg-forest-800/40 backdrop-blur-sm rounded-xl p-8 border border-forest-700/20 hover:border-copper-500/20 hover:bg-forest-800/60 transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_30px_-5px_rgba(193,127,89,0.15)] text-left">
+            <div className="bg-forest-800/30 backdrop-blur-sm rounded-2xl p-8 border border-forest-700/10 hover:border-copper-500/15 transition-all duration-500 text-left">
               <div className="w-10 h-10 rounded-lg bg-copper-500/10 border border-copper-500/20 flex items-center justify-center mb-4">
                 <IconClock className="w-5 h-5 text-copper-400" />
               </div>
@@ -891,10 +891,9 @@ export default function HomePage() {
           <div className="mt-10">
             <Link
               href="/demo"
-              className="inline-flex items-center gap-2 bg-copper-500 hover:bg-copper-600 text-white font-semibold px-8 py-4 rounded-lg transition-colors text-lg"
+              className="inline-flex items-center gap-2 bg-copper-500 hover:bg-copper-400 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 text-base shadow-[0_2px_16px_-4px_rgba(193,127,89,0.35)] hover:shadow-[0_4px_24px_-4px_rgba(193,127,89,0.5)]"
             >
-              <IconTrendingUp className="w-5 h-5" />
-              Calculate Your Savings
+              <IconTrendingUp className="w-5 h-5" /> Calculate Your Savings
             </Link>
           </div>
         </div>
@@ -920,7 +919,7 @@ export default function HomePage() {
           ].map((item) => {
             const Icon = item.icon;
             return (
-              <div key={item.title} className="bg-forest-800/40 backdrop-blur-sm rounded-xl p-6 border border-forest-700/20 hover:border-copper-500/20 hover:bg-forest-800/60 transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_30px_-5px_rgba(193,127,89,0.15)]">
+              <div key={item.title} className="bg-forest-900/30 backdrop-blur-sm rounded-2xl p-6 border border-forest-700/10 hover:border-copper-500/15 transition-all duration-500">
                 <div className="w-10 h-10 rounded-lg bg-copper-500/10 border border-copper-500/20 flex items-center justify-center mb-4">
                   <Icon className="w-5 h-5 text-copper-400" />
                 </div>
@@ -942,7 +941,7 @@ export default function HomePage() {
           </p>
           <Link
             href="/demo"
-            className="bg-copper-500 hover:bg-copper-600 text-white font-semibold px-10 py-4 rounded-lg transition-colors text-lg inline-block"
+            className="bg-copper-500 hover:bg-copper-400 text-white font-semibold px-10 py-4 rounded-lg transition-all duration-300 text-base inline-block shadow-[0_2px_16px_-4px_rgba(193,127,89,0.35)] hover:shadow-[0_4px_24px_-4px_rgba(193,127,89,0.5)]"
           >
             Book a Demo
           </Link>
@@ -959,7 +958,7 @@ export default function HomePage() {
           <p className="text-lg text-white/60 mb-12">
             Pangea was developed alongside real construction labour providers managing hundreds of workers across multiple sites.
           </p>
-          <div className="relative bg-forest-800/40 backdrop-blur-md rounded-2xl p-14 border border-copper-500/15 shadow-[0_0_60px_-10px_rgba(193,127,89,0.1)] overflow-hidden">
+          <div className="relative bg-forest-800/30 backdrop-blur-md rounded-2xl p-12 sm:p-16 border border-copper-500/10 shadow-[0_0_80px_-20px_rgba(193,127,89,0.08)] overflow-hidden">
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--color-copper-900)_0%,_transparent_60%)] opacity-10 pointer-events-none" />
             {/* Decorative quote mark */}
             <svg className="absolute top-6 left-6 w-32 h-32 text-copper-500/[0.08] pointer-events-none" viewBox="0 0 100 100" fill="currentColor">
@@ -969,7 +968,7 @@ export default function HomePage() {
               <div className="w-14 h-14 rounded-full bg-copper-500/10 border border-copper-500/20 flex items-center justify-center mx-auto mb-8 animate-pulse-glow">
                 <IconHardHat className="w-7 h-7 text-copper-400" />
               </div>
-              <blockquote className="font-serif text-2xl sm:text-3xl lg:text-4xl text-white/80 italic leading-relaxed mb-8">
+              <blockquote className="font-serif text-xl sm:text-2xl lg:text-3xl text-white/75 italic leading-[1.5] mb-8">
                 &ldquo;We were spending two full days a week just chasing CSCS cards and right-to-work documents. Now it happens automatically. The workers actually respond.&rdquo;
               </blockquote>
               <div className="text-base text-white/50">
@@ -981,32 +980,32 @@ export default function HomePage() {
       </Section>
 
       {/* CTA */}
-      <section className="relative py-28 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--color-copper-900)_0%,_transparent_70%)] opacity-20" />
-        <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="relative py-32 sm:py-40 overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--color-copper-900)_0%,_transparent_60%)] opacity-15" />
+        <div className="relative max-w-3xl mx-auto px-5 sm:px-8 lg:px-12 text-center">
           <SectionLabel>Get Started</SectionLabel>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-white mb-6">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-[3.25rem] lg:leading-[1.15] text-white mb-8 tracking-[-0.01em]">
             Get AI into your business or get left behind
           </h2>
-          <p className="text-lg text-white/60 mb-10 max-w-xl mx-auto">
+          <p className="text-lg text-white/50 mb-12 max-w-xl mx-auto leading-[1.7]">
             Find out where your compliance gaps are costing you, or let us clean your workforce database for free. See the difference Pangea makes before you commit.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/compliance"
-              className="bg-copper-500 hover:bg-copper-600 text-white font-semibold px-8 py-4 rounded-lg text-center transition-colors text-lg"
+              className="bg-copper-500 hover:bg-copper-400 text-white font-semibold px-8 py-4 rounded-lg text-center transition-all duration-300 text-base shadow-[0_2px_16px_-4px_rgba(193,127,89,0.35)] hover:shadow-[0_4px_24px_-4px_rgba(193,127,89,0.5)]"
             >
               Get Your Free Compliance Score
             </Link>
             <Link
               href="/demo"
-              className="border border-copper-500/50 hover:border-copper-400 text-copper-400 hover:text-copper-300 font-semibold px-8 py-4 rounded-lg text-center transition-colors text-lg"
+              className="border border-copper-500/30 hover:border-copper-400/50 text-copper-400 hover:text-copper-300 font-semibold px-8 py-4 rounded-lg text-center transition-all duration-300 text-base"
             >
               Clean Your Database Free
             </Link>
             <Link
               href="/demo"
-              className="border border-forest-600 hover:border-forest-400 text-white/80 hover:text-white font-semibold px-8 py-4 rounded-lg text-center transition-colors text-lg"
+              className="border border-forest-600 hover:border-copper-500/40 text-white/60 hover:text-white font-semibold px-8 py-4 rounded-lg text-center transition-all duration-300 text-base"
             >
               Book a Demo
             </Link>
